@@ -4,7 +4,7 @@ from Inventory import inventory as inv, list_com_banners as bn
 from Banners import promo_pity as pp
 from Banners import standard_banner, tartaglia_banner, everything_banner, zhongli_rerun_banner
 
-# Current Banner
+# Current Banner - Default
 banner_ = 'standard'
 
 

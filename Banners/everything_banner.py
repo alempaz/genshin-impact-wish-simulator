@@ -33,7 +33,6 @@ def show_pulls():
     wishes.init()
 
 
-# --------------------------------------- STANDARD BANNER ---------------------------------------------
 def everything_banner(limit):
     """
     Banner contains all standard 5 star characters, including promotional character 'Tartaglia'
