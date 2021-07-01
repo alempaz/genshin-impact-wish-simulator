@@ -12,6 +12,13 @@ import weapon_description as d
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SWORDS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 5 Star
+
+freedom_sworn = w.Sword(name='Freedom-Sworn', rarity='5 Star', base_atk_min=46, base_atk_max=608,
+                                 second_stat_type='Elemental Mastery', second_stat_min='43', second_stat_max='198',
+                                 passive_name='Revolutionary Chorale', passive_description=d.revolutionary_chorale,
+                                 in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                                 is_forgeable=False, is_standard=False)
+
 primordial_jade_cutter = w.Sword(name='Primordial Jade Cutter', rarity='5 Star', base_atk_min=44, base_atk_max=542,
                                  second_stat_type='Crit Rate', second_stat_min='9.6%', second_stat_max='44.1%',
                                  passive_name='Protector\'s Virtue', passive_description=d.protectors_virtue,

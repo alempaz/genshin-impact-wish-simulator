@@ -140,6 +140,16 @@ reckless_cinnabar = 'HP increased by 20~40%. Additionally, provides an ATK Bonus
                     'wielder\'s Max HP. When the wielder\'s HP is less than 50%, this ATK bonus is increased ' \
                     'by an additional 1~1.8% of Max HP.'
 
+revolutionary_chorale = 'A part of the "Millennial Movement" that wanders amidst the winds. Increases DMG by 10%. ' \
+                        'When the character wielding this weapon triggers Elemental Reactions, they gain a Sigil ' \
+                        'of Rebellion. This effect can be triggered once every 0.5s and can be triggered even if ' \
+                        'said character is not on the field. When you possess 2 Sigils of Rebellion, all of them will ' \
+                        'be consumed and all nearby party members will obtain "Millennial Movement: Song of Resistance"' \
+                        ' for 12s. "Millennial Movement: Song of Resistance" increases Normal, Charged and Plunging ' \
+                        'Attack DMG by 16% and increases ATK by 20%. Once this effect is triggered, you will not gain ' \
+                        'Sigils of Rebellion for 20s. Of the many effects of the "Millennial Movement," buffs of ' \
+                        'the same type will not stack.'
+
 
 sky_piercing_fang = 'Increases Shield Strength by 20~40%. Scoring hits on opponents increases ATK by 4~8% for 8s. ' \
                     'Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase' \

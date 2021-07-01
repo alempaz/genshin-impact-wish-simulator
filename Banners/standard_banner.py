@@ -28,7 +28,7 @@ def standard_banner(limit):
     Contains all standard 4 star characters and weapons, not including promotional ones
     Contains all 3 Star Weapons
 
-    5 Star Hard Pity is configured at 90 , having higher probability of getting a 5 star after 75 (soft pity)
+    5 Star Hard Pity is configured at 90 , having higher probability of getting a 5 star after 74 (soft pity)
     4 Star Hard Pity is configured at 10
     There is a 50-50 chance to get either a 5 Star Character or Weapon
     There is a 50-50 chance to get either a 4 Star Character or Weapon
@@ -64,9 +64,9 @@ def standard_banner(limit):
             banner_pity(4)
         else:
             # Pulls
-            if five_star_pity_standard > 75:
+            if five_star_pity_standard > 74:
                 # Adding more prob to get a 5 star
-                pull_percentage.extend(['5'] * 200)
+                pull_percentage.extend(['5'] * 250)
             magic = random.choice(pull_percentage)
             # 3 Star
             if magic == '3':

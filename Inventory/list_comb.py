@@ -5,13 +5,13 @@ from Weapons import weapon_list as w
 char_list_obj = [c.diluc, c.jean, c.keqing, c.mona, c.qiqi, c.albedo, c.ganyu, c.hu_tao, c.klee, c.tartaglia, c.venti,
                  c.xiao, c.zhongli, c.ayaka, c.eula, c.amber, c.barbara, c.beidou, c.bennet, c.chongyun, c.diona,
                  c.fischl, c.kaeya, c.lisa, c.ningguang, c.noelle, c.razor, c.rosaria, c.sucrose, c.xianglin,
-                 c.xinggqiu, c.xinyan, c.yanfei]
+                 c.xingqiu, c.xinyan, c.yanfei, c.kazuha, c.ayaka, c.yoimiya, c.sayu]
 
 # All Weapons in-game
 weapon_list_obj = [w.aquila_favonia,w.primordial_jade_cutter,w.summit_shaper,w.skyward_blade,w.blackcliff_longsword,
                    w.royal_longsword,w.the_black_sword,w.iron_sting,w.prototype_rancour,w.favonius_sword,
                    w.lions_roar,w.sacrificial_sword,w.the_flute,w.the_alley_flash,w.festering_desire,w.cool_steel,
-                   w.sword_of_descension,w.harbinger_of_dawn,w.skyrider_sword,
+                   w.sword_of_descension,w.harbinger_of_dawn,w.skyrider_sword,w.freedom_sworn,
 
                    w.song_of_broken_pines,w.skyward_pride,w.the_unforged,w.wolfs_gravestone,w.blackcliff_slasher,
                    w.royal_greatsword,w.serpent_spine,w.snow_tombed_starsilver,w.whiteblind,w.prototype_archaic,

@@ -2,10 +2,12 @@ from time import sleep
 from sys import exit
 from Inventory import inventory as inv, list_com_banners as bn
 from Banners import promo_pity as pp
-from Banners import standard_banner, tartaglia_banner, everything_banner, zhongli_rerun_banner
+from Banners import standard_banner, tartaglia_rerun_banner, everything_banner, zhongli_rerun_banner, eula_banner
+from Banners import klee_rerun_banner, kazuha_banner
 
 # Current Banner - Default
 banner_ = 'standard'
+banner_name = 'Standard'
 
 
 def init():
@@ -13,9 +15,13 @@ def init():
     Banners:
     Standard Banner = standard (By Default)
     Childe Banner = childe
+    Zhongli Rerun Banner = zhongli
+    Eula Banner = eula
+    Klee Rerun Banner = klee
     Everything Banner = everything
     """
     global banner_
+    global banner_name
 
     while True:
         user_input = input('\n  > ')
@@ -34,23 +40,38 @@ def init():
                 print(f'Banner is already {banner_}.')
                 continue
             elif x == 'standard':
-                banner_ = 'standard'
-                print(Color.RED + f'Changed to {banner_} Banner' + Color.END)
-                print('`~`' * 9, '\n')
-                continue
-            elif x == 'childe':
-                banner_ = 'childe'
-                print(Color.RED + f'Changed to {banner_} Banner' + Color.END)
+                banner_name, banner_ = 'Standard', 'standard'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
             elif x == 'everything':
-                banner_ = 'everything'
-                print(Color.RED + f'Changed to {banner_} Banner' + Color.END)
+                banner_name, banner_ = 'Everything Banner', 'everything'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
-            elif x == 'zhongli':
-                banner_ = 'zhongli'
-                print(Color.RED + f'Changed to {banner_} Banner' + Color.END)
+            elif x == 'childe_re':
+                banner_name, banner_ = 'Childe Rerun', 'childe_re'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'zhongli_re':
+                banner_name, banner_ = 'Zhongli Rerun', 'zhongli_re'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'eula':
+                banner_name, banner_ = 'Eula', 'eula'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'klee_re':
+                banner_name, banner_ = 'Klee Rerun', 'klee_re'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'kazuha':
+                banner_name, banner_ = 'Kazuha', 'kazuha'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
             # Helps
@@ -64,8 +85,8 @@ def init():
             # Get Pity
             elif x == 'pity':
                 print('\n', '`~`' * 13)
-                print(Color.YELLOW + f'5 Star pity count ({banner_} Banner): ' + Color.END + f'{get_pity_5(banner_)}')
-                print(Color.PURPLE + f'4 Star pity count ({banner_} Banner): ' + Color.END + f'{get_pity_4(banner_)}')
+                print(Color.YELLOW + f'5 Star pity count ({banner_name} Banner): ' + Color.END + f'{get_pity_5(banner_)}')
+                print(Color.PURPLE + f'4 Star pity count ({banner_name} Banner): ' + Color.END + f'{get_pity_4(banner_)}')
                 print('`~`' * 13, '\n')
             # Quit
             elif x in ['q', 'quit', 'bye']:
@@ -78,14 +99,20 @@ def init():
 def wish(banner, pull):
     if banner == 'standard':
         standard_banner.standard_banner(pull)
-    elif banner == 'childe':
-        tartaglia_banner.childe_banner(pull)
+    elif banner == 'childe_re':
+        tartaglia_rerun_banner.childe_rerun_banner(pull)
     elif banner == 'everything':
         everything_banner.everything_banner(pull)
-    elif banner == 'zhongli':
+    elif banner == 'zhongli_re':
         zhongli_rerun_banner.zhongli_rerun_banner(pull)
+    elif banner == 'eula':
+        eula_banner.eula_banner(pull)
+    elif banner == 'klee_re':
+        klee_rerun_banner.klee_rerun_banner(pull)
+    elif banner == 'kazuha':
+        kazuha_banner.kazuha_banner(pull)
     else:
-        raise Exception('No specified banner or pull in init')
+        raise Exception('No specified banner or pull in wishes.init')
 
 
 def get_pity_5(banner):
@@ -93,7 +120,7 @@ def get_pity_5(banner):
         return standard_banner.five_star_pity_standard
     elif banner == 'everything':
         return everything_banner.five_star_pity_everything
-    elif banner in ['childe', 'zhongli']:
+    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha']:
         return pp.five_star_promo_pity
     else:
         raise Exception('Not specified what banner is the pity')
@@ -104,7 +131,7 @@ def get_pity_4(banner):
         return standard_banner.four_star_pity_standard
     elif banner == 'everything':
         return everything_banner.four_star_pity_everything
-    elif banner in ['childe', 'zhongli']:
+    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha']:
         return pp.four_star_promo_pity
     else:
         raise Exception('Not specified what banner is the pity')
@@ -129,15 +156,21 @@ def help_me():
 
 def more():
     # Getting Characters
-    childe_4 = ', '.join([str(elem) for elem in bn.childe_banner_4])
-    zhongli_4 = ', '.join([str(elem) for elem in bn.zhongli_re_banner_4])
+    childe_re_4 = ', '.join([str(elem) for elem in bn.childe_banner_4])
+    zhongli_re_4 = ', '.join([str(elem) for elem in bn.zhongli_re_banner_4])
+    eula_4 = ', '.join([str(elem) for elem in bn.eula_banner_4])
+    klee_re_4 = ', '.join([str(elem) for elem in bn.klee_rerun_banner_4])
+    kazuha_4 = ', '.join([str(elem) for elem in bn.kazuha_banner_4])
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     print('\n', '`~`' * 9)
     print('How to change banners:\nType the name of the banner you want to pull in. Banners available are:\n'
           'Standard Banner' + Color.CYAN + ' = standard' + Color.END,
-          '\nTartaglia Banner ' + Color.PURPLE + f'({childe_4})' + Color.CYAN + ' = childe' + Color.END,
-          '\nZhongli Rerun Banner ' + Color.PURPLE + f'({zhongli_4})' + Color.CYAN + ' = zhongli' + Color.END,
+          '\nTartaglia Rerun Banner ' + Color.PURPLE + f'({childe_re_4})' + Color.CYAN + ' = childe_re' + Color.END,
+          '\nZhongli Rerun Banner ' + Color.PURPLE + f'({zhongli_re_4})' + Color.CYAN + ' = zhongli_re' + Color.END,
+          '\nEula Banner ' + Color.PURPLE + f'({eula_4})' + Color.CYAN + ' = eula' + Color.END,
+          '\nKlee Rerun Banner ' + Color.PURPLE + f'({klee_re_4})' + Color.CYAN + ' = klee_re' + Color.END,
+          '\nKazuha Banner ' + Color.PURPLE + f'({kazuha_4})' + Color.CYAN + ' = kazuha' + Color.END,
           '\nEverything Banner (Contains every 5*,4* Character/Weapon in the game)' + Color.CYAN + ' = everything'
           + Color.END, '\n\nNotes:\n\t● Standard and Everything Banner have their own pity. Promotional Banners share '
                        'pity.\n\t● Standard Banner have the same functions '
@@ -151,7 +184,8 @@ def more():
                        'weapons. You get a guaranteed character if you got a weapon before. Chances are '
                        '50-50% of getting either a character or a weapon.\n\t● Probabilities: 0.6% of getting a '
                        '5 Star ~ 5.1% of getting a 4 Star, ~ 94.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts '
-                       'after the 75th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.')
+                       'after the 74th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.'
+                       '\n\t\t 4* Pity is reset when you get a 5* character/weapon.')
     print('\n', '`~`' * 9)
     init()
 
@@ -249,11 +283,17 @@ def animation(rarity, banner):
     if banner == 'standard':
         standard_banner.show_pulls()
     elif banner == 'childe':
-        tartaglia_banner.show_pulls()
+        tartaglia_rerun_banner.show_pulls()
     elif banner == 'everything':
         everything_banner.show_pulls()
     elif banner == 'zhongli':
         zhongli_rerun_banner.show_pulls()
+    elif banner == 'eula':
+        eula_banner.show_pulls()
+    elif banner == 'klee_re':
+        klee_rerun_banner.show_pulls()
+    elif banner == 'kazuha':
+        kazuha_banner.show_pulls()
     else:
         raise Exception('No banner.show_pulls specified')
 

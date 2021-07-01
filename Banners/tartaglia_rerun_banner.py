@@ -26,14 +26,14 @@ def show_pulls():
     wishes.init()
 
 
-def childe_banner(limit):
+def childe_rerun_banner(limit):
     """
     Banner contains all standard 5 star characters, including promotional character 'Tartaglia'
     Contains all standard 4 star characters and weapons
     Characters 'Barbara','Fischl' and 'Rosaria' have higher drop rate than the other ones
     Contains all 3 Star Weapons
 
-    5 Star Hard Pity is configured at 90, having higher probability of getting a 5 star after 75 (soft pity)
+    5 Star Hard Pity is configured at 90, having higher probability of getting a 5 star after 74 (soft pity)
     4 Star Hard Pity is configured at 10
     There is a 50-50 chance to get either a 5 Star Character or Weapon
     There is a 50-50 chance to get either a 4 Star Character or Weapon
@@ -67,14 +67,14 @@ def childe_banner(limit):
             get_banner_pity(4)
         else:
             # Pulls
-            if pp.five_star_promo_pity > 75:
+            if pp.five_star_promo_pity > 74:
                 # Adding more prob to get a 5 star
-                pull_percentage.extend(['5'] * 200)
+                pull_percentage.extend(['5'] * 250)
             magic = random.choice(pull_percentage)
             # 3 Star
             if magic == '3':
                 a = random.choice(lst.star3_weapons)
-                add_gacha_childe(3, item=a)
+                add_gacha_childe_rerun(3, item=a)
                 inv.add_3star_weapon_inv(a)
                 add_pity(four=True, five=True)
             # 4 Star
@@ -100,7 +100,7 @@ def childe_banner(limit):
                             # Adding to Inventory
                             inv.add_4star_weapon_inv(b)
                             pp.flag_4star = True
-                    add_gacha_childe(4, b)
+                    add_gacha_childe_rerun(4, b)
                     add_pity(four=True, five=True)
                     pp.four_star_promo_pity = 0
                 else:
@@ -109,7 +109,7 @@ def childe_banner(limit):
                     # Adding to Inventory
                     inv.add_4star_char_inv(b)
                     pp.flag_4star = False
-                    add_gacha_childe(4, b)
+                    add_gacha_childe_rerun(4, b)
                     add_pity(four=True, five=True)
                     pp.four_star_promo_pity = 0
             # 5 Star
@@ -128,7 +128,7 @@ def childe_banner(limit):
                         # Adding to Inventory
                         inv.add_5star_char_inv(a)
                         pp.flag_5star = True
-                    add_gacha_childe(5, item=a)
+                    add_gacha_childe_rerun(5, item=a)
                     add_pity(four=True, five=True)
                 else:
                     # Guaranteed 5 Star Promotional
@@ -136,7 +136,7 @@ def childe_banner(limit):
                     # Adding to Inventory
                     inv.add_5star_char_inv(a)
                     pp.flag_5star = False
-                    add_gacha_childe(5, item=a)
+                    add_gacha_childe_rerun(5, item=a)
                     add_pity(four=True, five=True)
                 # Returning to the original weight percentages
                 pull_percentage = og_pull_percentage.copy()
@@ -173,7 +173,7 @@ def get_banner_pity(rarity):
                 # Adding to Inventory
                 inv.add_5star_char_inv(a)
                 pp.flag_5star = True
-            add_gacha_childe(5, item=a)
+            add_gacha_childe_rerun(5, item=a)
             add_pity(four=True, five=True)
         else:
             # Guaranteed 5 Star Promotional
@@ -181,7 +181,7 @@ def get_banner_pity(rarity):
             # Adding to Inventory
             inv.add_5star_char_inv(a)
             pp.flag_5star = False
-            add_gacha_childe(5, item=a)
+            add_gacha_childe_rerun(5, item=a)
             add_pity(four=True, five=True)
         pp.five_star_promo_pity = 0
         pp.four_star_promo_pity = 0
@@ -208,7 +208,7 @@ def get_banner_pity(rarity):
                     # Adding to Inventory
                     inv.add_4star_weapon_inv(b)
                     pp.flag_4star = True
-            add_gacha_childe(4, b)
+            add_gacha_childe_rerun(4, b)
             add_pity(four=True, five=True)
             pp.four_star_promo_pity = 0
         else:
@@ -217,7 +217,7 @@ def get_banner_pity(rarity):
             # Adding to Inventory
             inv.add_4star_char_inv(b)
             pp.flag_4star = False
-            add_gacha_childe(4, b)
+            add_gacha_childe_rerun(4, b)
             add_pity(four=True, five=True)
             pp.four_star_promo_pity = 0
 
@@ -236,7 +236,7 @@ def add_pity(four=False, five=False):
 
 
 # Add to the list for
-def add_gacha_childe(rarity, item):
+def add_gacha_childe_rerun(rarity, item):
     global gacha
     global gacha_show
 
