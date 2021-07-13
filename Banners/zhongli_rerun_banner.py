@@ -4,13 +4,6 @@ from Inventory import inventory as inv
 from Inventory import list_comb as lst, list_com_banners as lstbn
 from Banners import promo_pity as pp
 
-'''
-Again, lazy way of implementing a new banner. It's a copy of Tartaglia Banner, changing
-character lists. The best way of doing this, without repeating the code, is implementing a function that 
-makes all the pity, probs, and char/weapons lists automatically depending of the desired banner. 
-For now this will do. In the future I will implement said function in its own file.
-'''
-
 # pulls used to check inventory
 gacha = []
 # pulls used to print in console
@@ -28,7 +21,7 @@ def show_pulls():
 
 def zhongli_rerun_banner(limit):
     """
-    Banner contains all standard 5 star characters, including promotional character 'Tartaglia'
+    Banner contains all standard 5 star characters, including promotional character 'Zhongli'
     Contains all standard 4 star characters and weapons
     Characters 'Barbara','Fischl' and 'Rosaria' have higher drop rate than the other ones
     Contains all 3 Star Weapons

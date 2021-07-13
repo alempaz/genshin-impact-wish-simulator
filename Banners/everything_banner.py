@@ -35,10 +35,8 @@ def show_pulls():
 
 def everything_banner(limit):
     """
-    Banner contains all standard 5 star characters, including promotional character 'Tartaglia'
-    Contains all standard 4 star characters and weapons
-    Characters 'Barbara','Fischl' and 'Rosaria' have higher drop rate than the other ones
-    Contains all 3 Star Weapons
+    Banner contains every Character in the game, including promo and standard characters.
+    Contains every weapon in the game, including forgeables, battle pass, gacha, etc.
 
     5 Star Hard Pity is configured at 90, having higher probability of getting a 5 star after 74 (soft pity)
     4 Star Hard Pity is configured at 10

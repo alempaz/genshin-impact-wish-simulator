@@ -22,3 +22,7 @@ klee_rerun_banner_4 = [cha.barbara.name, cha.sucrose.name, cha.fischl.name]
 # ---------------------------------------------- Kazuha Banner ----------------------------------------------
 kazuha_banner_5 = [cha.kazuha.name]
 kazuha_banner_4 = [cha.rosaria.name, cha.bennet.name, cha.razor.name]
+
+# ---------------------------------------------- Kamisato Ayaka Banner ----------------------------------------------
+ayaka_banner_5 = [cha.ayaka.name]
+ayaka_banner_4 = [cha.ningguang.name, cha.chongyun.name, cha.yanfei.name]

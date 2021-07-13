@@ -4,13 +4,6 @@ from Inventory import inventory as inv
 from Inventory import list_comb as lst, list_com_banners as lstbn
 from Banners import promo_pity as pp
 
-'''
-This is the lazy way of implementing another banner. It's a copy of the Standard Banner, changing probs, pitys and 
-characters/weapons lists. The best way of doing this, without repeating the code, is implementing a function that 
-makes all the pity, probs, and char/weapons lists automatically depending of the desired banner. 
-For now this will do. In the future I will implement said function in its own file.
-'''
-
 # pulls used to check inventory
 gacha = []
 # pulls used to print in console

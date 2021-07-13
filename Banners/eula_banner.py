@@ -21,7 +21,7 @@ def show_pulls():
 
 def eula_banner(limit):
     """
-    Banner contains all standard 5 star characters, including promotional character 'Tartaglia'
+    Banner contains all standard 5 star characters, including promotional character 'Eula'
     Contains all standard 4 star characters and weapons
     Characters 'Barbara','Fischl' and 'Rosaria' have higher drop rate than the other ones
     Contains all 3 Star Weapons

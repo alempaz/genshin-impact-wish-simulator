@@ -19,9 +19,9 @@ def show_pulls():
     wishes.init()
 
 
-def klee_rerun_banner(limit):
+def ayaka_banner(limit):
     """
-    Banner contains all standard 5 star characters, including promotional character 'Klee'
+    Banner contains all standard 5 star characters, including promotional character 'Kamisato Ayaka'
     Contains all standard 4 star characters and weapons
     Characters 'Barbara','Fischl' and 'Rosaria' have higher drop rate than the other ones
     Contains all 3 Star Weapons
@@ -67,7 +67,7 @@ def klee_rerun_banner(limit):
             # 3 Star
             if magic == '3':
                 a = random.choice(lst.star3_weapons)
-                add_gacha_klee_rerun(3, item=a)
+                add_gacha_ayaka(3, item=a)
                 inv.add_3star_weapon_inv(a)
                 add_pity(four=True, five=True)
             # 4 Star
@@ -77,7 +77,7 @@ def klee_rerun_banner(limit):
                     # 50-50% chance of getting either a promotional character, or a standard character/weapon
                     if random.randint(1, 2) == 1:
                         # Promotional Character won
-                        b = random.choice(lstbn.klee_rerun_banner_4)
+                        b = random.choice(lstbn.ayaka_banner_4)
                         # Adding to Inventory
                         inv.add_4star_char_inv(b)
                     else:
@@ -93,16 +93,16 @@ def klee_rerun_banner(limit):
                             # Adding to Inventory
                             inv.add_4star_weapon_inv(b)
                             pp.flag_4star = True
-                    add_gacha_klee_rerun(4, b)
+                    add_gacha_ayaka(4, b)
                     add_pity(four=True, five=True)
                     pp.four_star_promo_pity = 0
                 else:
                     # Guaranteed 4 Star Promotional
-                    b = random.choice(lstbn.klee_rerun_banner_4)
+                    b = random.choice(lstbn.ayaka_banner_4)
                     # Adding to Inventory
                     inv.add_4star_char_inv(b)
                     pp.flag_4star = False
-                    add_gacha_klee_rerun(4, b)
+                    add_gacha_ayaka(4, b)
                     add_pity(four=True, five=True)
                     pp.four_star_promo_pity = 0
             # 5 Star
@@ -112,7 +112,7 @@ def klee_rerun_banner(limit):
                     # 50-50 chance of getting either a promotional character, or a standard character/weapon
                     if random.randint(1, 2) == 1:
                         # Promotional Character won
-                        a = random.choice(lstbn.klee_rerun_banner_5)
+                        a = random.choice(lstbn.ayaka_banner_5)
                         # Adding to Inventory
                         inv.add_5star_char_inv(a)
                     else:
@@ -121,15 +121,15 @@ def klee_rerun_banner(limit):
                         # Adding to Inventory
                         inv.add_5star_char_inv(a)
                         pp.flag_5star = True
-                    add_gacha_klee_rerun(5, item=a)
+                    add_gacha_ayaka(5, item=a)
                     add_pity(four=True, five=True)
                 else:
                     # Guaranteed 5 Star Promotional
-                    a = random.choice(lstbn.klee_rerun_banner_5)
+                    a = random.choice(lstbn.ayaka_banner_5)
                     # Adding to Inventory
                     inv.add_5star_char_inv(a)
                     pp.flag_5star = False
-                    add_gacha_klee_rerun(5, item=a)
+                    add_gacha_ayaka(5, item=a)
                     add_pity(four=True, five=True)
                 # Returning to the original weight percentages
                 pull_percentage = og_pull_percentage.copy()
@@ -157,7 +157,7 @@ def get_banner_pity(rarity):
             # 50-50 chance of getting either a promotional character, or a standard character
             if random.randint(1, 2) == 1:
                 # Promotional Character won
-                a = random.choice(lstbn.klee_rerun_banner_5)
+                a = random.choice(lstbn.ayaka_banner_5)
                 # Adding to Inventory
                 inv.add_5star_char_inv(a)
             else:
@@ -166,15 +166,15 @@ def get_banner_pity(rarity):
                 # Adding to Inventory
                 inv.add_5star_char_inv(a)
                 pp.flag_5star = True
-            add_gacha_klee_rerun(5, item=a)
+            add_gacha_ayaka(5, item=a)
             add_pity(four=True, five=True)
         else:
             # Guaranteed 5 Star Promotional
-            a = random.choice(lstbn.klee_rerun_banner_5)
+            a = random.choice(lstbn.ayaka_banner_5)
             # Adding to Inventory
             inv.add_5star_char_inv(a)
             pp.flag_5star = False
-            add_gacha_klee_rerun(5, item=a)
+            add_gacha_ayaka(5, item=a)
             add_pity(four=True, five=True)
         pp.five_star_promo_pity = 0
         pp.four_star_promo_pity = 0
@@ -185,7 +185,7 @@ def get_banner_pity(rarity):
             # 50-50 chance of getting either a promotional character, or a standard character/weapon
             if random.randint(1, 2) == 1:
                 # Promotional Character won
-                b = random.choice(lstbn.klee_rerun_banner_4)
+                b = random.choice(lstbn.ayaka_banner_4)
                 # Adding to Inventory
                 inv.add_4star_char_inv(b)
             else:
@@ -201,16 +201,16 @@ def get_banner_pity(rarity):
                     # Adding to Inventory
                     inv.add_4star_weapon_inv(b)
                     pp.flag_4star = True
-            add_gacha_klee_rerun(4, b)
+            add_gacha_ayaka(4, b)
             add_pity(four=True, five=True)
             pp.four_star_promo_pity = 0
         else:
             # Guaranteed 4 Star Promotional
-            b = random.choice(lstbn.klee_rerun_banner_4)
+            b = random.choice(lstbn.ayaka_banner_4)
             # Adding to Inventory
             inv.add_4star_char_inv(b)
             pp.flag_4star = False
-            add_gacha_klee_rerun(4, b)
+            add_gacha_ayaka(4, b)
             add_pity(four=True, five=True)
             pp.four_star_promo_pity = 0
 
@@ -229,7 +229,7 @@ def add_pity(four=False, five=False):
 
 
 # Add to the list for
-def add_gacha_klee_rerun(rarity, item):
+def add_gacha_ayaka(rarity, item):
     global gacha
     global gacha_show
 

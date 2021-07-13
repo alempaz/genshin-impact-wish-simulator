@@ -3,7 +3,7 @@ from sys import exit
 from Inventory import inventory as inv, list_com_banners as bn
 from Banners import promo_pity as pp
 from Banners import standard_banner, tartaglia_rerun_banner, everything_banner, zhongli_rerun_banner, eula_banner
-from Banners import klee_rerun_banner, kazuha_banner
+from Banners import klee_rerun_banner, kazuha_banner, ayaka_banner
 
 # Current Banner - Default
 banner_ = 'standard'
@@ -18,6 +18,7 @@ def init():
     Zhongli Rerun Banner = zhongli
     Eula Banner = eula
     Klee Rerun Banner = klee
+    Kamisato Ayaka Banner = ayaka
     Everything Banner = everything
     """
     global banner_
@@ -74,6 +75,11 @@ def init():
                 print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
+            elif x == 'ayaka':
+                banner_name, banner_ = 'Kamisato Ayaka', 'ayaka'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
             # Helps
             elif x == 'help':
                 help_me()
@@ -111,6 +117,8 @@ def wish(banner, pull):
         klee_rerun_banner.klee_rerun_banner(pull)
     elif banner == 'kazuha':
         kazuha_banner.kazuha_banner(pull)
+    elif banner == 'ayaka':
+        ayaka_banner.ayaka_banner(pull)
     else:
         raise Exception('No specified banner or pull in wishes.init')
 
@@ -120,7 +128,7 @@ def get_pity_5(banner):
         return standard_banner.five_star_pity_standard
     elif banner == 'everything':
         return everything_banner.five_star_pity_everything
-    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha']:
+    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka']:
         return pp.five_star_promo_pity
     else:
         raise Exception('Not specified what banner is the pity')
@@ -131,7 +139,7 @@ def get_pity_4(banner):
         return standard_banner.four_star_pity_standard
     elif banner == 'everything':
         return everything_banner.four_star_pity_everything
-    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha']:
+    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka']:
         return pp.four_star_promo_pity
     else:
         raise Exception('Not specified what banner is the pity')
@@ -161,6 +169,7 @@ def more():
     eula_4 = ', '.join([str(elem) for elem in bn.eula_banner_4])
     klee_re_4 = ', '.join([str(elem) for elem in bn.klee_rerun_banner_4])
     kazuha_4 = ', '.join([str(elem) for elem in bn.kazuha_banner_4])
+    ayaka_4 = ', '.join([str(elem) for elem in bn.ayaka_banner_4])
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     print('\n', '`~`' * 9)
@@ -171,6 +180,7 @@ def more():
           '\nEula Banner ' + Color.PURPLE + f'({eula_4})' + Color.CYAN + ' = eula' + Color.END,
           '\nKlee Rerun Banner ' + Color.PURPLE + f'({klee_re_4})' + Color.CYAN + ' = klee_re' + Color.END,
           '\nKazuha Banner ' + Color.PURPLE + f'({kazuha_4})' + Color.CYAN + ' = kazuha' + Color.END,
+          '\nAyaka Banner ' + Color.PURPLE + f'({ayaka_4})' + Color.CYAN + ' = ayaka' + Color.END,
           '\nEverything Banner (Contains every 5*,4* Character/Weapon in the game)' + Color.CYAN + ' = everything'
           + Color.END, '\n\nNotes:\n\t● Standard and Everything Banner have their own pity. Promotional Banners share '
                        'pity.\n\t● Standard Banner have the same functions '
@@ -282,11 +292,11 @@ def animation(rarity, banner):
 
     if banner == 'standard':
         standard_banner.show_pulls()
-    elif banner == 'childe':
-        tartaglia_rerun_banner.show_pulls()
     elif banner == 'everything':
         everything_banner.show_pulls()
-    elif banner == 'zhongli':
+    elif banner == 'childe_re':
+        tartaglia_rerun_banner.show_pulls()
+    elif banner == 'zhongli_re':
         zhongli_rerun_banner.show_pulls()
     elif banner == 'eula':
         eula_banner.show_pulls()
@@ -294,6 +304,8 @@ def animation(rarity, banner):
         klee_rerun_banner.show_pulls()
     elif banner == 'kazuha':
         kazuha_banner.show_pulls()
+    elif banner == 'ayaka':
+        ayaka_banner.show_pulls()
     else:
         raise Exception('No banner.show_pulls specified')
 
