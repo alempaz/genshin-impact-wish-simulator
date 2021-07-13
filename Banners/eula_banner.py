@@ -9,6 +9,8 @@ gacha = []
 # pulls used to print in console
 gacha_show = []
 
+banner_name = 'eula'
+
 
 def show_pulls():
     global gacha_show
@@ -81,6 +83,7 @@ def eula_banner(limit):
                         # Adding to Inventory
                         inv.add_4star_char_inv(b)
                     else:
+                        pp.flag_4star = True
                         # 50-50 chance of getting either a character or a weapon
                         if random.randint(1, 2) == 1:
                             # Character won
@@ -92,7 +95,6 @@ def eula_banner(limit):
                             b = random.choice(lst.star4_standar_weapons)
                             # Adding to Inventory
                             inv.add_4star_weapon_inv(b)
-                            pp.flag_4star = True
                     add_gacha_eula(4, b)
                     add_pity(four=True, five=True)
                     pp.four_star_promo_pity = 0
@@ -134,7 +136,6 @@ def eula_banner(limit):
                 # Returning to the original weight percentages
                 pull_percentage = og_pull_percentage.copy()
                 pp.five_star_promo_pity = 0
-                pp.four_star_promo_pity = 0
 
     # Init Star Animation
     # Checking if there is a 5*,4* or 3* in the pulls. If there are, the animation changes.
@@ -177,7 +178,6 @@ def get_banner_pity(rarity):
             add_gacha_eula(5, item=a)
             add_pity(four=True, five=True)
         pp.five_star_promo_pity = 0
-        pp.four_star_promo_pity = 0
 
     elif rarity == 4:
         # If Promo Character was won = 50-50% Chance of winning another one
@@ -189,6 +189,7 @@ def get_banner_pity(rarity):
                 # Adding to Inventory
                 inv.add_4star_char_inv(b)
             else:
+                pp.flag_4star = True
                 # 50-50 chance of getting either a character or a weapon
                 if random.randint(1, 2) == 1:
                     # Character won
@@ -200,7 +201,6 @@ def get_banner_pity(rarity):
                     b = random.choice(lst.star4_standar_weapons)
                     # Adding to Inventory
                     inv.add_4star_weapon_inv(b)
-                    pp.flag_4star = True
             add_gacha_eula(4, b)
             add_pity(four=True, five=True)
             pp.four_star_promo_pity = 0
@@ -217,6 +217,7 @@ def get_banner_pity(rarity):
 
 # Function to keep track of pity
 def add_pity(four=False, five=False):
+    pp.pull_count(banner_name)
     if five and four:
         pp.five_star_promo_pity += 1
         pp.four_star_promo_pity += 1

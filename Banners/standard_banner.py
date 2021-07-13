@@ -9,6 +9,8 @@ gacha = []
 # pulls used to print in console
 gacha_show = []
 
+banner_name = 'standard'
+
 
 def show_pulls():
     global gacha_show
@@ -103,7 +105,6 @@ def standard_banner(limit):
                 # Returning to the original weight percentages
                 pull_percentage = og_pull_percentage.copy()
                 pp.five_star_pity_standard = 0
-                pp.four_star_pity_standard = 0
 
     # Init Star Animation
     # Checking if there is a 5*,4* or 3* in the pulls. If there are, the animation changes.
@@ -136,7 +137,6 @@ def banner_pity(rarity):
         add_gacha(5, a)
         add_pity(four=True, five=True)
         pp.five_star_pity_standard = 0
-        pp.four_star_pity_standard = 0
 
     elif rarity == 4:
         # 50-50 chance of getting either a character or a weapon
@@ -157,6 +157,7 @@ def banner_pity(rarity):
 
 # Function to keep track of pity
 def add_pity(four=False, five=False):
+    pp.pull_count(banner_name)
     if five and four:
         pp.five_star_pity_standard += 1
         pp.four_star_pity_standard += 1

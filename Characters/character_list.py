@@ -1,7 +1,7 @@
 import characters as c
 
 # 5 Star Characters ------------------------------------------------------
-diluc = c.SwordUser(name='Diluc', rarity='5 Star', element='Pyro', gender='Male', nation='Mondstadt', weapon='Sword',
+diluc = c.ClaymoreUser(name='Diluc', rarity='5 Star', element='Pyro', gender='Male', nation='Mondstadt', weapon='Sword',
                     description='As the wealthiest gentleman in Mondstadt, the ever-dapper Diluc always presents '
                                 'himself as the epitome of perfection. But behind the courteous visage burns '
                                 'a zealous soul that has sworn to protect Mondstadt at all costs, allowing him '
@@ -252,5 +252,3 @@ sayu = c.ClaymoreUser(name='Sayu', rarity='4 Star', element='Anemo', gender='Fem
                         weapon='Claymore', in_game=False, char_type='perma',
                         description='A pint-sized ninja attached to the Shiyuumatsu-Ban, '
                                     'who always seems sleep-deprived.')
-
-

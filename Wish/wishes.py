@@ -93,6 +93,8 @@ def init():
                 print('\n', '`~`' * 13)
                 print(Color.YELLOW + f'5 Star pity count ({banner_name} Banner): ' + Color.END + f'{get_pity_5(banner_)}')
                 print(Color.PURPLE + f'4 Star pity count ({banner_name} Banner): ' + Color.END + f'{get_pity_4(banner_)}')
+                print('---')
+                print(f'Total pulls in {banner_name} Banner: {pp.get_pull_count(banner_)}')
                 print('`~`' * 13, '\n')
             # Quit
             elif x in ['q', 'quit', 'bye']:
@@ -156,7 +158,8 @@ def help_me():
     n_q = Color.RED + 'q' + Color.END
     n_wn = Color.UNDERLINE + 'will not' + Color.END
     print('\n', '`~`' * 9, f'\nType {n_1} for a single pull. | Type {n_10} for a ten pull.\nType {n_inv} to see your '
-                           f'inventory.\nType {n_pity} to see the current pity of your current banner.\nType {n_help} '
+                           f'inventory.\nType {n_pity} to see the current pity + total amount of'
+                           f' pulls made in your current banner.\nType {n_help} '
                            f'to see this message again.\nType {n_more} to read banner instructions and more.'
                            f'\nType {n_q} to quit. Note: Your inventory {n_wn} be saved.\n', '`~`' * 17)
     init()
@@ -194,8 +197,7 @@ def more():
                        'weapons. You get a guaranteed character if you got a weapon before. Chances are '
                        '50-50% of getting either a character or a weapon.\n\t● Probabilities: 0.6% of getting a '
                        '5 Star ~ 5.1% of getting a 4 Star, ~ 94.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts '
-                       'after the 74th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.'
-                       '\n\t\t 4* Pity is reset when you get a 5* character/weapon.')
+                       'after the 74th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.')
     print('\n', '`~`' * 9)
     init()
 

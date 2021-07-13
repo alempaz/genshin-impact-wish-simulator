@@ -13,3 +13,64 @@ four_star_promo_pity = 0
 # Flags if promo character was not won
 flag_5star = False
 flag_4star = False
+
+# Amount of pulls
+standard_pulls = 0
+everything_pulls = 0
+childe_rerun_pulls = 0
+zhongli_rerun_pulls = 0
+eula_pulls = 0
+klee_rerun_pulls = 0
+kazuha_pulls = 0
+ayaka_pulls = 0
+
+
+def pull_count(banner):
+    global standard_pulls
+    global everything_pulls
+    global childe_rerun_pulls
+    global zhongli_rerun_pulls
+    global eula_pulls
+    global klee_rerun_pulls
+    global kazuha_pulls
+    global ayaka_pulls
+
+    if banner == 'standard':
+        standard_pulls += 1
+    elif banner == 'everything':
+        everything_pulls += 1
+    elif banner == 'childe_re':
+        childe_rerun_pulls += 1
+    elif banner == 'zhongli_re':
+        zhongli_rerun_pulls += 1
+    elif banner == 'eula':
+        eula_pulls += 1
+    elif banner == 'klee_re':
+        klee_rerun_pulls += 1
+    elif banner == 'kazuha':
+        kazuha_pulls += 1
+    elif banner == 'ayaka':
+        ayaka_pulls += 1
+    else:
+        raise Exception('Could not add pull count. Banner not specified.')
+
+
+def get_pull_count(banner):
+    if banner == 'standard':
+        return standard_pulls
+    elif banner == 'everything':
+        return everything_pulls
+    elif banner == 'childe_re':
+        return childe_rerun_pulls
+    elif banner == 'zhongli_re':
+        return zhongli_rerun_pulls
+    elif banner == 'eula':
+        return eula_pulls
+    elif banner == 'klee_re':
+        return klee_rerun_pulls
+    elif banner == 'kazuha':
+        return kazuha_pulls
+    elif banner == 'ayaka':
+        return ayaka_pulls
+    else:
+        raise Exception('Could not return pull count. Banner not specified.')
