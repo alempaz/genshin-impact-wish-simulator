@@ -125,9 +125,9 @@ def wish(banner, pull):
 
 def get_pity_5(banner):
     if banner == 'standard':
-        return standard_banner.five_star_pity_standard
+        return pp.five_star_pity_standard
     elif banner == 'everything':
-        return everything_banner.five_star_pity_everything
+        return pp.five_star_pity_everything
     elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka']:
         return pp.five_star_promo_pity
     else:
@@ -136,9 +136,9 @@ def get_pity_5(banner):
 
 def get_pity_4(banner):
     if banner == 'standard':
-        return standard_banner.four_star_pity_standard
+        return pp.four_star_pity_standard
     elif banner == 'everything':
-        return everything_banner.four_star_pity_everything
+        return pp.four_star_pity_everything
     elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka']:
         return pp.four_star_promo_pity
     else:

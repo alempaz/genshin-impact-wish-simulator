@@ -23,7 +23,7 @@ def ayaka_banner(limit):
     """
     Banner contains all standard 5 star characters, including promotional character 'Kamisato Ayaka'
     Contains all standard 4 star characters and weapons
-    Characters 'Barbara','Fischl' and 'Rosaria' have higher drop rate than the other ones
+    Characters 'Yanfei','Ningguang' and 'Chongyun' have higher drop rate than the other ones
     Contains all 3 Star Weapons
 
     5 Star Hard Pity is configured at 90, having higher probability of getting a 5 star after 74 (soft pity)

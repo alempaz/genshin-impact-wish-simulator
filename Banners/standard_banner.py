@@ -2,10 +2,7 @@ import random
 from Wish import wishes
 from Inventory import inventory as inv
 from Inventory import list_comb as lst
-
-# Pity Count
-five_star_pity_standard = 0
-four_star_pity_standard = 0
+from Banners import promo_pity as pp
 
 # pulls used to check inventory
 gacha = []
@@ -38,8 +35,6 @@ def standard_banner(limit):
     5.1% Chance to get a 4 Star
     0.6% Chance to get a 5 Star
     """
-    global five_star_pity_standard
-    global four_star_pity_standard
     global gacha
     global gacha_show
 
@@ -55,16 +50,16 @@ def standard_banner(limit):
     for _ in range(1, limit + 1):
         # Pity System
         # 90 - Is 5 Star pity (n-1) = 89
-        if five_star_pity_standard >= 89:
+        if pp.five_star_pity_standard >= 89:
             # Returning to the original weight percentages
             pull_percentage = og_pull_percentage.copy()
             banner_pity(5)
         # 10 - is 4 star pity (n-1) = 9
-        elif four_star_pity_standard >= 9:
+        elif pp.four_star_pity_standard >= 9:
             banner_pity(4)
         else:
             # Pulls
-            if five_star_pity_standard > 74:
+            if pp.five_star_pity_standard > 74:
                 # Adding more prob to get a 5 star
                 pull_percentage.extend(['5'] * 250)
             magic = random.choice(pull_percentage)
@@ -89,7 +84,7 @@ def standard_banner(limit):
                     inv.add_4star_weapon_inv(a)
                 add_gacha(4, a)
                 add_pity(four=True, five=True)
-                four_star_pity_standard = 0
+                pp.four_star_pity_standard = 0
             # 5 Star
             else:
                 # 50-50 chance of getting either a character or a weapon
@@ -107,8 +102,8 @@ def standard_banner(limit):
                 add_pity(four=True, five=True)
                 # Returning to the original weight percentages
                 pull_percentage = og_pull_percentage.copy()
-                five_star_pity_standard = 0
-                four_star_pity_standard = 0
+                pp.five_star_pity_standard = 0
+                pp.four_star_pity_standard = 0
 
     # Init Star Animation
     # Checking if there is a 5*,4* or 3* in the pulls. If there are, the animation changes.
@@ -126,9 +121,6 @@ def standard_banner(limit):
 
 
 def banner_pity(rarity):
-    global five_star_pity_standard
-    global four_star_pity_standard
-
     if rarity == 5:
         # 50-50 chance of getting either a character or a weapon
         if random.randint(1, 2) == 1:
@@ -143,8 +135,8 @@ def banner_pity(rarity):
             inv.add_5star_weapon_inv(a)
         add_gacha(5, a)
         add_pity(four=True, five=True)
-        five_star_pity_standard = 0
-        four_star_pity_standard = 0
+        pp.five_star_pity_standard = 0
+        pp.four_star_pity_standard = 0
 
     elif rarity == 4:
         # 50-50 chance of getting either a character or a weapon
@@ -160,20 +152,18 @@ def banner_pity(rarity):
             inv.add_4star_weapon_inv(a)
         add_gacha(4, a)
         add_pity(four=True, five=True)
-        four_star_pity_standard = 0
+        pp.four_star_pity_standard = 0
 
 
 # Function to keep track of pity
 def add_pity(four=False, five=False):
-    global five_star_pity_standard
-    global four_star_pity_standard
     if five and four:
-        five_star_pity_standard += 1
-        four_star_pity_standard += 1
+        pp.five_star_pity_standard += 1
+        pp.four_star_pity_standard += 1
     elif not five:
-        four_star_pity_standard += 1
+        pp.four_star_pity_standard += 1
     elif not four:
-        five_star_pity_standard += 1
+        pp.five_star_pity_standard += 1
     else:
         raise Exception('Error while adding pity to perma pity. There needs to be a True statement')
 
