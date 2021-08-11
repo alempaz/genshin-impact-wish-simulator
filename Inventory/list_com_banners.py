@@ -26,3 +26,6 @@ kazuha_banner_4 = [cha.rosaria.name, cha.bennet.name, cha.razor.name]
 # ---------------------------------------------- Kamisato Ayaka Banner ----------------------------------------------
 ayaka_banner_5 = [cha.ayaka.name]
 ayaka_banner_4 = [cha.ningguang.name, cha.chongyun.name, cha.yanfei.name]
+# ---------------------------------------------- Yoimiya Banner ----------------------------------------------
+yoimiya_banner_5 = [cha.yoimiya.name]
+yoimiya_banner_4 = [cha.sayu.name, cha.diona.name, cha.xinyan.name]

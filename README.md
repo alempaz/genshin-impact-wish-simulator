@@ -24,6 +24,7 @@
   * ***klee_re*** = Klee Rerun Banner
   * ***kazuha*** = Kazuha Rerun Banner
   * ***ayaka*** = Kamisato Ayaka Banner
+  * ***yoimiya*** = Yoimiya Banner
   * ***standard*** = Standard Banner
   * ***everything*** = Every Character and Weapon Banner
 

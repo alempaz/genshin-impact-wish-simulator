@@ -2,10 +2,11 @@ import characters as c
 
 # 5 Star Characters ------------------------------------------------------
 diluc = c.ClaymoreUser(name='Diluc', rarity='5 Star', element='Pyro', gender='Male', nation='Mondstadt', weapon='Sword',
-                    description='As the wealthiest gentleman in Mondstadt, the ever-dapper Diluc always presents '
-                                'himself as the epitome of perfection. But behind the courteous visage burns '
-                                'a zealous soul that has sworn to protect Mondstadt at all costs, allowing him '
-                                'to mercilessly vanquish all who threaten his city.', in_game=True, char_type='perma')
+                       description='As the wealthiest gentleman in Mondstadt, the ever-dapper Diluc always presents '
+                                   'himself as the epitome of perfection. But behind the courteous visage burns '
+                                   'a zealous soul that has sworn to protect Mondstadt at all costs, allowing him '
+                                   'to mercilessly vanquish all who threaten his city.', in_game=True,
+                       char_type='perma')
 
 jean = c.SwordUser(name='Jean', rarity='5 Star', element='Anemo', gender='Female', nation='Mondstadt', weapon='Sword',
                    description='As the Acting Grand Master of the Knights, Jean has always been devoted to her duties '
@@ -92,7 +93,6 @@ zhongli = c.PolearmUser(name='Zhongli', rarity='5 Star', element='Geo', gender='
                                     'courtesy and rules. From his seat at Wangsheng Funeral Parlor, he performs all '
                                     'manner of rituals.', in_game=True, char_type='promo')
 
-
 eula = c.ClaymoreUser(name='Eula', rarity='5 Star', element='Cryo', gender='Female', nation='Mondstadt',
                       weapon='Claymore',
                       description='The Spindrift Knight, a scion of the old aristocracy, and the Captain of the '
@@ -101,22 +101,37 @@ eula = c.ClaymoreUser(name='Eula', rarity='5 Star', element='Cryo', gender='Fema
                                   'mystery in Mondstadt to this very day.', in_game=True, char_type='promo')
 
 kazuha = c.SwordUser(name='Kaedehara Kazuha', rarity='5 Star', element='Anemo', gender='Male', nation='Inazuma',
-                      weapon='Sword',
-                      description='A wandering samurai from Inazuma who is currently with Liyue\'s Crux Fleet. '
-                                  'A gentle and carefree soul whose heart hides a great many burdens from the past.'
+                     weapon='Sword',
+                     description='A wandering samurai from Inazuma who is currently with Liyue\'s Crux Fleet. '
+                                 'A gentle and carefree soul whose heart hides a great many burdens from the past.'
                      , in_game=True, char_type='promo')
 
-# Upcoming Characters
 ayaka = c.SwordUser(name='Kamisato Ayaka', rarity='5 Star', element='Cryo', gender='Female', nation='Inazuma',
                     weapon='Sword',
                     description='The princess of the Kamisato House. She occasionally practices '
                                 'swordsmanship so that she can pass time by slicing every falling '
-                                'snowflake floating around her on a snowy day.', in_game=False, char_type='promo')
+                                'snowflake floating around her on a snowy day.', in_game=True, char_type='promo')
 
 yoimiya = c.BowUser(name='Yoimiya', rarity='5 Star', element='Pyro', gender='Female', nation='Inazuma',
-                        weapon='Bow', description='Owner of Naganohara Fireworks. Known as "Queen of the '
-                        'Summer Festival, she excels in her craft of creating fireworks that symbolize people\'s '
-                        'hopes and dreams.', in_game=False, char_type='promo',)
+                    weapon='Bow', description='Owner of Naganohara Fireworks. Known as "Queen of the '
+                                              'Summer Festival, she excels in her craft of creating fireworks that symbolize people\'s '
+                                              'hopes and dreams.', in_game=True, char_type='promo', )
+
+# Upcoming Characters
+raiden = c.PolearmUser(name='Raiden Shogun', rarity='5 Star', element='Electro', gender='Female', nation='Inazuma',
+                   weapon='Polearm', description='Her Excellency, the Almighty Narukami Ogosho, who promised the '
+                                                 'people of Inazuma an unchanging Eternity.', in_game=False,
+                   char_type='promo', )
+
+kokomi = c.CatalystUser(name='Sangonomiya Kokomi', rarity='5 Star', element='Hydro', gender='Female', nation='Inazuma',
+                   weapon='Catalyst', description='The Divine Priestess of Watatsumi Island. All of the island\'s '
+                                                  'affairs are at this young lady\'s fingertips.', in_game=False,
+                   char_type='promo', )
+
+aloy = c.BowUser(name='Aloy', rarity='5 Star', element='Cryo', gender='Female', nation=None,
+                 weapon='Bow', description='Formerly an outcast, now a hunter of unparalleled aptitude. '
+                                           'Ready to do the right thing with her bow at any given time.', in_game=False,
+                 char_type='promo', )
 
 # 4 Star Characters -----------------------------------------------------
 amber = c.BowUser(name='Amber', rarity='4 Star', element='Pyro', gender='Female', nation='Mondstadt', weapon='Bow',
@@ -231,9 +246,9 @@ xianglin = c.PolearmUser(name='Xianglin', rarity='4 Star', element='Pyro', gende
 
 xingqiu = c.SwordUser(name='Xingqiu', rarity='4 Star', element='Hydro', gender='Male', nation='Liyue', weapon='Sword',
                       description='The second son of the Feiyun Commerce Guild, Xingqiu has had a reputation for '
-                                   'being studious and polite ever since he was a young child. But there is another '
-                                   'side to the mild-mannered Xingqiu everyone knows. A daring, adventurous and '
-                                   'much more mischievous side...', in_game=True, char_type='perma')
+                                  'being studious and polite ever since he was a young child. But there is another '
+                                  'side to the mild-mannered Xingqiu everyone knows. A daring, adventurous and '
+                                  'much more mischievous side...', in_game=True, char_type='perma')
 
 xinyan = c.ClaymoreUser(name='Xinyan', rarity='4 Star', element='Pyro', gender='Female', nation='Liyue',
                         weapon='Claymore', in_game=True, char_type='perma',
@@ -247,8 +262,11 @@ yanfei = c.CatalystUser(name='Yanfei', rarity='4 Star', element='Pyro', gender='
                         description='A well-known legal adviser active in Liyue Harbor. A briliant young lady '
                                     'in whose veins runs the blood of an illuminated beast.')
 
-# Upcoming Characters
 sayu = c.ClaymoreUser(name='Sayu', rarity='4 Star', element='Anemo', gender='Female', nation='Inazuma',
-                        weapon='Claymore', in_game=False, char_type='perma',
-                        description='A pint-sized ninja attached to the Shiyuumatsu-Ban, '
-                                    'who always seems sleep-deprived.')
+                      weapon='Claymore', in_game=True, char_type='perma',
+                      description='A pint-sized ninja attached to the Shiyuumatsu-Ban, '
+                                  'who always seems sleep-deprived.')
+# Upcoming Characters
+sara = c.BowUser(name='Kujou Sara', rarity='4 Star', element='Electro', gender='Female', nation='Inazuma',
+                      weapon='Bow', in_game=False, char_type='perma',
+                      description='A general of the Tenryou Commission. Bold, decisive, and skilled in battle.')

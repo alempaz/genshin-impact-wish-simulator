@@ -23,6 +23,7 @@ eula_pulls = 0
 klee_rerun_pulls = 0
 kazuha_pulls = 0
 ayaka_pulls = 0
+yoimiya_pulls = 0
 
 
 def pull_count(banner):
@@ -34,6 +35,7 @@ def pull_count(banner):
     global klee_rerun_pulls
     global kazuha_pulls
     global ayaka_pulls
+    global yoimiya_pulls
 
     if banner == 'standard':
         standard_pulls += 1
@@ -51,6 +53,8 @@ def pull_count(banner):
         kazuha_pulls += 1
     elif banner == 'ayaka':
         ayaka_pulls += 1
+    elif banner == 'yoimiya':
+        yoimiya_pulls += 1
     else:
         raise Exception('Could not add pull count. Banner not specified.')
 
@@ -72,5 +76,7 @@ def get_pull_count(banner):
         return kazuha_pulls
     elif banner == 'ayaka':
         return ayaka_pulls
+    elif banner == 'yoimiya':
+        return yoimiya_pulls
     else:
         raise Exception('Could not return pull count. Banner not specified.')
