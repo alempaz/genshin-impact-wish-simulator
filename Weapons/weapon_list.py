@@ -14,10 +14,10 @@ import weapon_description as d
 # 5 Star
 
 freedom_sworn = w.Sword(name='Freedom-Sworn', rarity='5 Star', base_atk_min=46, base_atk_max=608,
-                                 second_stat_type='Elemental Mastery', second_stat_min='43', second_stat_max='198',
-                                 passive_name='Revolutionary Chorale', passive_description=d.revolutionary_chorale,
-                                 in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
-                                 is_forgeable=False, is_standard=False)
+                        second_stat_type='Elemental Mastery', second_stat_min='43', second_stat_max='198',
+                        passive_name='Revolutionary Chorale', passive_description=d.revolutionary_chorale,
+                        in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                        is_forgeable=False, is_standard=False)
 
 primordial_jade_cutter = w.Sword(name='Primordial Jade Cutter', rarity='5 Star', base_atk_min=44, base_atk_max=542,
                                  second_stat_type='Crit Rate', second_stat_min='9.6%', second_stat_max='44.1%',
@@ -278,6 +278,14 @@ primordial_jade_winged_spear = w.Polearm(name='Primordial Jade Winged-Spear', ra
                                          in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
                                          is_forgeable=False, is_standard=True)
 
+engulfing_lightning = w.Polearm(name='Engulfing Lightning', rarity='5 Star', base_atk_min=46,
+                                         base_atk_max=608, second_stat_type='Energy Recharge', second_stat_min='12%',
+                                         second_stat_max='55.1%', passive_name='Timeless Dream: Eternal Stove',
+                                         passive_description=d.timeless_dream,
+                                         in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                                         is_forgeable=False, is_standard=True)
+
+
 # 4 Star
 blackcliff_pole = w.Polearm(name='Blackcliff Pole', rarity='4 Star', base_atk_min=42, base_atk_max=510,
                             second_stat_type='Crit Damage', second_stat_min='12%', second_stat_max='55.1%',
@@ -363,6 +371,12 @@ skyward_atlas = w.Catalyst(name='Skyward Atlas', rarity='5 Star', base_atk_min=4
                            passive_name='Wandering Clouds', passive_description=d.wandering_clouds,
                            in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
                            is_standard=True)
+
+everlasting_moonglow = w.Catalyst(name='Everlasting Moonglow', rarity='5 Star', base_atk_min=46, base_atk_max=608,
+                           second_stat_type='HP', second_stat_min='10.8%', second_stat_max='49.6%',
+                           passive_name='Byakuya Kougetsu', passive_description=d.byakuya_kougetsu,
+                           in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                           is_standard=False)
 
 # 4 Star
 blackcliff_agate = w.Catalyst(name='Blackcliff Agate', rarity='4 Star', base_atk_min=42, base_atk_max=510,
@@ -459,7 +473,7 @@ amos_bow = w.Bow(name='Amos\' Bow', rarity='5 Star', base_atk_min=46, base_atk_m
 elegy_of_the_end = w.Bow(name='Elegy for the End', rarity='5 Star', base_atk_min=46, base_atk_max=608,
                          second_stat_type='Energy Recharge', second_stat_min='12%', second_stat_max='55.1%',
                          passive_name='The Parting Refrain', passive_description=d.the_parting_refrain,
-                         in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                         in_shop=False, in_gacha=True, in_battlepass=False, is_limited=True, is_forgeable=False,
                          is_standard=False)
 
 skyward_harp = w.Bow(name='Skyward Harp', rarity='5 Star', base_atk_min=48, base_atk_max=674,
@@ -467,6 +481,12 @@ skyward_harp = w.Bow(name='Skyward Harp', rarity='5 Star', base_atk_min=48, base
                      passive_name='Echoing Ballad', passive_description=d.echoing_ballad,
                      in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
                      is_standard=True)
+
+thundering_pulse = w.Bow(name='Thundering Pulse', rarity='5 Star', base_atk_min=46, base_atk_max=608,
+                         second_stat_type='Crit Damage', second_stat_min='14.4%', second_stat_max='66.2%',
+                         passive_name='Rule By Thunder', passive_description=d.rule_by_thunder,
+                         in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                         is_standard=False)
 
 # 4 Star
 blackcliff_warbow = w.Bow(name='Blackcliff Warbow', rarity='4 Star', base_atk_min=44, base_atk_max=565,

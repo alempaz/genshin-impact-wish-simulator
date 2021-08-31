@@ -23,6 +23,11 @@ blunt_conclusion = 'After using an Elemental Skill, Normal or Charged Attacks, o
 boundless_blessing = 'Increases Movement SPD by 10%. When in battle, gain an 8~16% Elemental DMG Bonus every 4s. ' \
                      'Max 4 stacks. Lasts until the character falls or leaves combat.'
 
+byakuya_kougetsu = 'Healing Bonus increased by 10~20%, Normal Attack DMG is increased by 1~3% of the Max HP ' \
+                   'of the character equipping this weapon. For 12s after using an Elemental Burst, ' \
+                   'Normal Attacks that hit opponents will restore 0.6 Energy. ' \
+                   'Energy can be restored this way once every 0.1s.'
+
 chord = 'Normal or Charged Attacks grant a Harmonic on hits. Gaining 5 Harmonics triggers the power of music ' \
         'and deals 100~200% and Elemental Skill CRIT Rate by 6~12%. ATK DMG to surrounding enemies. ' \
         'Harmonics last up to 30s, and a maximum of 1 can be gained every 0.5s.'
@@ -150,6 +155,12 @@ revolutionary_chorale = 'A part of the "Millennial Movement" that wanders amidst
                         'Sigils of Rebellion for 20s. Of the many effects of the "Millennial Movement," buffs of ' \
                         'the same type will not stack.'
 
+rule_by_thunder = 'Increases ATK by 20% and grants the might of the Thunder Emblem. At stack levels 1/2/3, the ' \
+                  'Thunder Emblem increases Normal Attack DMG by 12/24/40%. The character will obtain 1 stack of ' \
+                  'Thunder Emblem in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), ' \
+                  'casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy ' \
+                  'is full). Each stack\'s duration is calculated independently.'
+
 
 sky_piercing_fang = 'Increases Shield Strength by 20~40%. Scoring hits on opponents increases ATK by 4~8% for 8s. ' \
                     'Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase' \
@@ -183,6 +194,9 @@ the_parting_refrain = 'A part of the "Millennial Movement" that wanders amidst t
                       'and increases ATK by 20~40%. Once this effect is triggered, you will not gain Sigils of ' \
                       'Remembrance for 20s. Of the many effects of the "Millennial Movement," buffs of ' \
                       'the same type will not stack.'
+
+timeless_dream = 'ATK increased by 28%~56% of Energy Recharge over the base 100%. You can gain a maximum bonus ' \
+                 'of 80%~120% ATK. Gain 30%~50% Energy Recharge for 12s after using an Elemental Burst.'
 
 unbending = 'When HP falls below 70~90%, increases Charged Attack DMG by 30~50%, and ' \
             'Charged Attacks become much harder to interrupt.'

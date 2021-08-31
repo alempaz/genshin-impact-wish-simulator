@@ -117,11 +117,12 @@ yoimiya = c.BowUser(name='Yoimiya', rarity='5 Star', element='Pyro', gender='Fem
                                               'Summer Festival, she excels in her craft of creating fireworks that symbolize people\'s '
                                               'hopes and dreams.', in_game=True, char_type='promo', )
 
-# Upcoming Characters
 raiden = c.PolearmUser(name='Raiden Shogun', rarity='5 Star', element='Electro', gender='Female', nation='Inazuma',
                    weapon='Polearm', description='Her Excellency, the Almighty Narukami Ogosho, who promised the '
-                                                 'people of Inazuma an unchanging Eternity.', in_game=False,
+                                                 'people of Inazuma an unchanging Eternity.', in_game=True,
                    char_type='promo', )
+
+# Upcoming Characters
 
 kokomi = c.CatalystUser(name='Sangonomiya Kokomi', rarity='5 Star', element='Hydro', gender='Female', nation='Inazuma',
                    weapon='Catalyst', description='The Divine Priestess of Watatsumi Island. All of the island\'s '
@@ -266,7 +267,9 @@ sayu = c.ClaymoreUser(name='Sayu', rarity='4 Star', element='Anemo', gender='Fem
                       weapon='Claymore', in_game=True, char_type='perma',
                       description='A pint-sized ninja attached to the Shiyuumatsu-Ban, '
                                   'who always seems sleep-deprived.')
-# Upcoming Characters
+
 sara = c.BowUser(name='Kujou Sara', rarity='4 Star', element='Electro', gender='Female', nation='Inazuma',
-                      weapon='Bow', in_game=False, char_type='perma',
+                      weapon='Bow', in_game=True, char_type='perma',
                       description='A general of the Tenryou Commission. Bold, decisive, and skilled in battle.')
+# Upcoming Characters
+

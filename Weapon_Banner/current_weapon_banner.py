@@ -25,9 +25,9 @@ def weapon_banner(limit):
     """
     Banner contains all 5* standard weapons
     Banner contains all standard 4* characters and 4* weapons
-    Promotional 5* weapons with higher drop rate are 'Thundering Pulse' and 'Skyward Blade'
-    Promotional 4* weapons are 'Favonius Warbow, 'Sacrificial Fragments', 'Dragon's Bane', 'Rainslasher',
-    Sacrificial Sword
+    Promotional 5* weapons with higher drop rate are 'Engulfing Lightning' and 'The Unforged'
+    Promotional 4* weapons are 'Favonius Lance, 'Sacrificial Bow', 'Lion's Roar', 'The Bell',
+    'The Widsith'
 
     5 Star Hard Pity is configured at 80, having higher probability of getting a 5 star after 64 (soft pity)
     4 Star Hard Pity is configured at 9
@@ -78,7 +78,7 @@ def weapon_banner(limit):
                     # 75% chance of getting either a promotional character, or a standard character/weapon
                     if random.randint(1, 4) != 1:
                         # Random Promotional 4* Weapon Won
-                        b = random.choice(lstbn.yoi_weapon_banner_4)
+                        b = random.choice(lstbn.current_weapon_banner_4)
                         # Adding to Inventory
                         inv.add_4star_weapon_inv(b)
                     else:
@@ -99,7 +99,7 @@ def weapon_banner(limit):
                     pp.four_star_weapon_pity = 0
                 else:
                     # Guaranteed 4 Star Promotional Weapon
-                    b = random.choice(lstbn.yoi_weapon_banner_4)
+                    b = random.choice(lstbn.current_weapon_banner_4)
                     # Adding to Inventory
                     inv.add_4star_weapon_inv(b)
                     pp.flag_4star_weapon = False
@@ -116,7 +116,7 @@ def weapon_banner(limit):
                         a = random.choice(lst.star5_standar_weapons)
                     else:
                         # 50-50% chance of getting either promotional weapon A or B
-                        a = random.choice(lstbn.yoi_weapon_banner_5)
+                        a = random.choice(lstbn.current_weapon_banner_5)
                         pp.flag_5star_weapon = True
                     # Adding to Inventory
                     inv.add_5star_weapon_inv(a)
@@ -124,7 +124,7 @@ def weapon_banner(limit):
                     add_pity(four=True, five=True)
                 else:
                     # Guaranteed one of the two 5* Promotional Weapons
-                    a = random.choice(lstbn.yoi_weapon_banner_5)
+                    a = random.choice(lstbn.current_weapon_banner_5)
                     # Adding to Inventory
                     inv.add_5star_weapon_inv(a)
                     pp.flag_5star_weapon = False
@@ -160,7 +160,7 @@ def get_banner_pity(rarity):
                 inv.add_5star_weapon_inv(a)
             else:
                 # 50-50% chance of getting either promotional weapon A or B
-                a = random.choice(lstbn.yoi_weapon_banner_5)
+                a = random.choice(lstbn.current_weapon_banner_5)
                 # Adding to Inventory
                 inv.add_5star_weapon_inv(a)
                 pp.flag_5star_weapon = True
@@ -168,7 +168,7 @@ def get_banner_pity(rarity):
             add_pity(four=True, five=True)
         else:
             # Guaranteed one of the two 5* Promotional Weapons
-            a = random.choice(lstbn.yoi_weapon_banner_5)
+            a = random.choice(lstbn.current_weapon_banner_5)
             # Adding to Inventory
             inv.add_5star_weapon_inv(a)
             pp.flag_5star_weapon = False
@@ -182,7 +182,7 @@ def get_banner_pity(rarity):
             # 75% chance of getting either a promotional character, or a standard character/weapon
             if random.randint(1, 4) != 1:
                 # Random Promotional 4* Weapon Won
-                b = random.choice(lstbn.yoi_weapon_banner_4)
+                b = random.choice(lstbn.current_weapon_banner_4)
                 # Adding to Inventory
                 inv.add_4star_weapon_inv(b)
             else:
@@ -203,7 +203,7 @@ def get_banner_pity(rarity):
             pp.four_star_weapon_pity = 0
         else:
             # Guaranteed 4 Star Promotional Weapon
-            b = random.choice(lstbn.yoi_weapon_banner_4)
+            b = random.choice(lstbn.current_weapon_banner_4)
             # Adding to Inventory
             inv.add_4star_weapon_inv(b)
             pp.flag_4star_weapon = False

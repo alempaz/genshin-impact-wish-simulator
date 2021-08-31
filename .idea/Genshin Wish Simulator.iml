@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Inventory" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Weapons" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Wish" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Weapon_Banner" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

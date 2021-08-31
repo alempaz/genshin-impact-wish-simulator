@@ -3,7 +3,8 @@ from sys import exit
 from Inventory import inventory as inv, list_com_banners as bn
 from Banners import promo_pity as pp
 from Banners import standard_banner, tartaglia_rerun_banner, everything_banner, zhongli_rerun_banner, eula_banner
-from Banners import klee_rerun_banner, kazuha_banner, ayaka_banner, yoimiya_banner
+from Banners import klee_rerun_banner, kazuha_banner, ayaka_banner, yoimiya_banner, raiden_banner
+from Weapon_Banner import current_weapon_banner
 
 # Current Banner - Default
 banner_ = 'standard'
@@ -20,7 +21,9 @@ def init():
     Klee Rerun Banner = klee
     Kamisato Ayaka Banner = ayaka
     Yoimiya Banner = yoimiya
+    Raiden Shogun Banner = raiden
     Everything Banner = everything
+    weapon banner = weapon
     """
     global banner_
     global banner_name
@@ -43,6 +46,11 @@ def init():
                 continue
             elif x == 'standard':
                 banner_name, banner_ = 'Standard', 'standard'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'weapon':
+                banner_name, banner_ = 'Weapon', 'weapon'
                 print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
@@ -86,6 +94,11 @@ def init():
                 print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
+            elif x == 'raiden':
+                banner_name, banner_ = 'Raiden Shogun', 'raiden'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
             # Helps
             elif x == 'help':
                 help_me()
@@ -113,10 +126,12 @@ def init():
 def wish(banner, pull):
     if banner == 'standard':
         standard_banner.standard_banner(pull)
-    elif banner == 'childe_re':
-        tartaglia_rerun_banner.childe_rerun_banner(pull)
+    elif banner == 'weapon':
+        current_weapon_banner.weapon_banner(pull)
     elif banner == 'everything':
         everything_banner.everything_banner(pull)
+    elif banner == 'childe_re':
+        tartaglia_rerun_banner.childe_rerun_banner(pull)
     elif banner == 'zhongli_re':
         zhongli_rerun_banner.zhongli_rerun_banner(pull)
     elif banner == 'eula':
@@ -129,6 +144,8 @@ def wish(banner, pull):
         ayaka_banner.ayaka_banner(pull)
     elif banner == 'yoimiya':
         yoimiya_banner.yoimiya_banner(pull)
+    elif banner == 'raiden':
+        raiden_banner.raiden_banner(pull)
     else:
         raise Exception('No specified banner or pull in wishes.init')
 
@@ -136,9 +153,11 @@ def wish(banner, pull):
 def get_pity_5(banner):
     if banner == 'standard':
         return pp.five_star_pity_standard
+    elif banner == 'weapon':
+        return pp.five_star_weapon_pity
     elif banner == 'everything':
         return pp.five_star_pity_everything
-    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka', 'yoimiya']:
+    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka', 'yoimiya', 'raiden']:
         return pp.five_star_promo_pity
     else:
         raise Exception('Not specified what banner is the pity')
@@ -147,9 +166,11 @@ def get_pity_5(banner):
 def get_pity_4(banner):
     if banner == 'standard':
         return pp.four_star_pity_standard
+    elif banner == 'weapon':
+        return pp.four_star_weapon_pity
     elif banner == 'everything':
         return pp.four_star_pity_everything
-    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka', 'yoimiya']:
+    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka', 'yoimiya', 'raiden']:
         return pp.four_star_promo_pity
     else:
         raise Exception('Not specified what banner is the pity')
@@ -182,11 +203,18 @@ def more():
     kazuha_4 = ', '.join([str(elem) for elem in bn.kazuha_banner_4])
     ayaka_4 = ', '.join([str(elem) for elem in bn.ayaka_banner_4])
     yoimiya_4 = ', '.join([str(elem) for elem in bn.yoimiya_banner_4])
+    raiden_4 = ', '.join([str(elem) for elem in bn.raiden_banner_4])
+    # Weapons
+    current_weapon_5 = ', '.join([str(elem) for elem in bn.current_weapon_banner_5])
+    current_weapon_4 = ', '.join([str(elem) for elem in bn.current_weapon_banner_4])
+    # weapon_yoimiya_4 = ', '.join([str(elem) for elem in bn.yoi_weapon_banner_4])
+    # weapon_yoimiya_5 = ', '.join([str(elem) for elem in bn.yoi_weapon_banner_5])
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     print('\n', '`~`' * 9)
     print('How to change banners:\nType the name of the banner you want to pull in. Banners available are:\n'
           'Standard Banner' + Color.CYAN + ' = standard' + Color.END,
+          '\nCurrent Weapon Banner ' + Color.YELLOW + f'({current_weapon_5})' + Color.PURPLE + f'({current_weapon_4})' + Color.CYAN + ' = weapon' + Color.END,
           '\nTartaglia Rerun Banner ' + Color.PURPLE + f'({childe_re_4})' + Color.CYAN + ' = childe_re' + Color.END,
           '\nZhongli Rerun Banner ' + Color.PURPLE + f'({zhongli_re_4})' + Color.CYAN + ' = zhongli_re' + Color.END,
           '\nEula Banner ' + Color.PURPLE + f'({eula_4})' + Color.CYAN + ' = eula' + Color.END,
@@ -194,6 +222,7 @@ def more():
           '\nKazuha Banner ' + Color.PURPLE + f'({kazuha_4})' + Color.CYAN + ' = kazuha' + Color.END,
           '\nAyaka Banner ' + Color.PURPLE + f'({ayaka_4})' + Color.CYAN + ' = ayaka' + Color.END,
           '\nYoimiya Banner ' + Color.PURPLE + f'({yoimiya_4})' + Color.CYAN + ' = yoimiya' + Color.END,
+          '\nRaiden Shogun Banner ' + Color.PURPLE + f'({raiden_4})' + Color.CYAN + ' = raiden' + Color.END,
           '\nEverything Banner (Contains every 5*,4* Character/Weapon in the game)' + Color.CYAN + ' = everything'
           + Color.END, '\n\nNotes:\n\t● Standard and Everything Banner have their own pity. Promotional Banners share '
                        'pity.\n\t● Standard Banner have the same functions '
@@ -202,12 +231,16 @@ def more():
                        'first time a 5* appeared was not the promotional one, next 5* will be guaranteed the '
                        '5* promotional character; 50% chance of getting\n\t\tone of the promotional 4* Characters, '
                        'if you got a non promotional 4* Character, next 4* will be guaranteed one of the promotional '
-                       '4* characters.\n\t● Everything banner contains EVERY 5*/4* Character and Weapon in the game, '
+                       '4* characters.\n\t● Weapon Banner includes the CURRENT weapon banner, including the 4* and 5*.'
+                       '\n\t● Everything banner contains EVERY 5*/4* Character and Weapon in the game, '
                        'including gacha, shop, forgeable, battlepass, event exclusives\n\t\t and promotional '
                        'weapons. You get a guaranteed character if you got a weapon before. Chances are '
                        '50-50% of getting either a character or a weapon.\n\t● Probabilities: 0.6% of getting a '
                        '5 Star ~ 5.1% of getting a 4 Star, ~ 94.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts '
-                       'after the 74th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.')
+                       'after the 74th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.'
+                       '\n\t● Weapon Banner Probabilities: 0.7% of getting a 5 Star ~ 5.1% of getting a 4 Star, '
+                       '~ 93.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts after the 64th Pull. Hard Pity is'
+                       'in the 80th pull. 4* is guaranteed in each 9 pull.')
     print('\n', '`~`' * 9)
     init()
 
@@ -304,6 +337,8 @@ def animation(rarity, banner):
 
     if banner == 'standard':
         standard_banner.show_pulls()
+    elif banner == 'weapon':
+        current_weapon_banner.show_pulls()
     elif banner == 'everything':
         everything_banner.show_pulls()
     elif banner == 'childe_re':
@@ -320,6 +355,8 @@ def animation(rarity, banner):
         ayaka_banner.show_pulls()
     elif banner == 'yoimiya':
         yoimiya_banner.show_pulls()
+    elif banner == 'raiden':
+        raiden_banner.show_pulls()
     else:
         raise Exception('No banner.show_pulls specified')
 
