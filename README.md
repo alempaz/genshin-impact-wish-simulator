@@ -1,26 +1,30 @@
 # Genshin Impact Wish Simulator
 
-### This is a somewhat complete text-based(terminal) Genshin Impact Wish Simulator made 100% in Python. It contains: 
-* Ability to wish in eight different banners = Standard Banner / Tartaglia Rerun Banner / Zhongi Rerun Banner / Eula Banner / Klee Rerun Banner / Kazuha Banner / Ayaka Banner / Everything Banner.
-* Ability to wish in the current weapon banner (Epitome Invocation - 10/08/2021)
+### This is a complete text-based(terminal) Genshin Impact Wish Simulator made 100% in Python. It contains: 
+* Ability to wish in 17 different banners.
+* Ability to wish in the current weapon banner (Epitome Invocation 2.3 part 2 - 12/14/2021 - MM/DD/YY)
 * Can pull (1) Single Pull or (10) Ten Pull.
 * Inventory System.
 * Pity System.
+* Star Animation System (Can be turned off).
 * Shows the amount of pulls made for each banner.
-* Pull percentages almost 100% similar to the ones in-game.
-* Soft Pity and Hard Pity system.
+* Pull percentages 99% similar to the ones in-game.
+* Soft Pity and Hard Pity systems for 4* and 5* same as the ones in-game.
 * Color Coded Terminal for easy readability.
 
 
 ## How To Use
 * Type ***1*** for a single pull. | Type ***10*** for a ten pull.
 
+ 
 * Type ***inv*** to see your inventory.
+
 
 * Type ***pity*** to see the current pity of your current banner + total amount of pulls made in current banner.
 
+
 * Type the banner name to change to that banner:
-  * ***childe_re*** = Childe Rerun Banner
+  * ***childe_re*** = Tartaglia Rerun Banner
   * ***zhongli_re*** = Zhongli Rerun Banner
   * ***eula*** = Eula Banner
   * ***klee_re*** = Klee Rerun Banner
@@ -28,13 +32,23 @@
   * ***ayaka*** = Kamisato Ayaka Banner
   * ***yoimiya*** = Yoimiya Banner
   * ***raiden*** = Raiden Shogun Banner
+  * ***kokomi*** = Sangonomiya Kokomi Banner
+  * ***childe_re2*** = Tartaglia Rerun 2 Banner
+  * ***hutao_re*** = Hu Tao Rerun Banner
+  * ***eula_re*** = Eula Rerun Banner
+  * ***albedo_re*** = Albedo Rerun Banner
+  * ***itto*** = Arataki Itto Banner
   * ***standard*** = Standard Banner
   * ***everything*** = Every Character and Weapon Banner
-  * ***weapon*** = Current Weapon Banner (Epitome Invocation - 31/08/2021)
+  * ***weapon*** = Current Weapon Banner (Epitome Invocation 2.3 part 2 - 14/12/2021)
+
+* Type ***on*** or ***off*** to turn ON or OFF the Star animation after a pull(s).
+
 
 * Type ***q*** to quit. Note: Your inventory *will not* be saved.
 
-* Type ***help*** or ***more*** for more help and instructions.
+
+* Type ***help*** or ***more*** for more help and instructions(long).
 
 ## Pull Percentages
 Standard and Promotional Banners:
@@ -51,7 +65,6 @@ Weapon Banner:
 
 ## Notes
 Pity system works as in-game. Promotional Banners (Childe, Zhongli, Eula, Klee, Kazuha, etc) have a unified pity. Standard and Everything Banner have individual pity systems. Weapon Banner has his own pity as well.
-
 
 
 Everything Banner is an original banner that contains every character and weapon in-game.

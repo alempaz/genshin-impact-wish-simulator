@@ -23,7 +23,7 @@ primordial_jade_cutter = w.Sword(name='Primordial Jade Cutter', rarity='5 Star',
                                  second_stat_type='Crit Rate', second_stat_min='9.6%', second_stat_max='44.1%',
                                  passive_name='Protector\'s Virtue', passive_description=d.protectors_virtue,
                                  in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
-                                 is_forgeable=False, is_standard=True)
+                                 is_forgeable=False, is_standard=False)
 
 aquila_favonia = w.Sword(name='Aquila Favonia', rarity='5 Star', base_atk_min=48, base_atk_max=674,
                          second_stat_type='Physical DMG Bonus', second_stat_min='9%', second_stat_max='41.3%',
@@ -35,7 +35,7 @@ summit_shaper = w.Sword(name='Summit Shaper', rarity='5 Star', base_atk_min=46, 
                         second_stat_min='10.8%', second_stat_max='49.6%', passive_name='Golden Majesty',
                         passive_description=d.golden_majesty, in_shop=False,
                         in_gacha=True,
-                        in_battlepass=False, is_limited=False, is_forgeable=False, is_standard=True)
+                        in_battlepass=False, is_limited=False, is_forgeable=False, is_standard=False)
 
 skyward_blade = w.Sword(name='Skyward Blade', rarity='5 Star', base_atk_min=46, base_atk_max=608,
                         second_stat_type='Energy Recharge',
@@ -43,6 +43,13 @@ skyward_blade = w.Sword(name='Skyward Blade', rarity='5 Star', base_atk_min=46, 
                         passive_description=d.sky_piercing_fang, in_shop=False,
                         in_gacha=True,
                         in_battlepass=False, is_limited=False, is_forgeable=False, is_standard=True)
+
+mistsplitter_reforged = w.Sword(name='Mistsplitter Reforged', rarity='5 Star', base_atk_min=48, base_atk_max=674,
+                                second_stat_type='Crit Damage',
+                                second_stat_min='9.6%', second_stat_max='44.1%', passive_name='Mistsplitter\'s Edge',
+                                passive_description=d.mistsplitters_edge, in_shop=False,
+                                in_gacha=True,
+                                in_battlepass=False, is_limited=False, is_forgeable=False, is_standard=False)
 
 # 4 Star
 blackcliff_longsword = w.Sword(name='Blackcliff Longsword', rarity='4 Star', base_atk_min=44, base_atk_max=565,
@@ -108,6 +115,19 @@ festering_desire = w.Sword(name='Festering Desire', rarity='4 Star', base_atk_mi
                            passive_name='Undying Admiration', passive_description=d.undying_admiration, in_shop=False,
                            in_gacha=False,
                            in_battlepass=False, is_limited=True, is_forgeable=False, is_standard=False)
+
+amenoma_kageuchi = w.Sword(name='Amenoma Kageuchi', rarity='4 Star', base_atk_min=41, base_atk_max=454,
+                           second_stat_type='ATK', second_stat_min='12%', second_stat_max='55.1%',
+                           passive_name='Iwakura Succession', passive_description=d.iwakura_succession, in_shop=False,
+                           in_gacha=False,
+                           in_battlepass=False, is_limited=False, is_forgeable=True, is_standard=False)
+
+cinnabar_spindle = w.Sword(name='Cinnabar Spindle', rarity='4 Star', base_atk_min=41, base_atk_max=454,
+                           second_stat_type='DEF', second_stat_min='15%', second_stat_max='69%',
+                           passive_name='Spotless Heart', passive_description=d.spotless_heart, in_shop=False,
+                           in_gacha=False,
+                           in_battlepass=False, is_limited=True, is_forgeable=False, is_standard=False)
+
 # Playstation Exclusive
 sword_of_descension = w.Sword(name='Sword of Descension', rarity='4 Star', base_atk_min=39, base_atk_max=440,
                               second_stat_type='ATK', second_stat_min='7.7%', second_stat_max='35.2%',
@@ -152,13 +172,19 @@ the_unforged = w.Claymore(name='The Unforged', rarity='5 Star', base_atk_min=46,
                           second_stat_type='ATK', second_stat_min='10.8%', second_stat_max='49.6%',
                           passive_name='Golden Majesty', passive_description=d.golden_majesty,
                           in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
-                          is_standard=True)
+                          is_standard=False)
 
 wolfs_gravestone = w.Claymore(name='Wolf\'s Gravestone', rarity='5 Star', base_atk_min=46, base_atk_max=608,
                               second_stat_type='ATK', second_stat_min='10.8%', second_stat_max='49.6%',
                               passive_name='Wolfish Tracker', passive_description=d.wolfish_tracker,
                               in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
                               is_standard=True)
+
+redhorn_stonethresher = w.Claymore(name='Redhorn Stonethresher', rarity='5 Star', base_atk_min=44, base_atk_max=542,
+                                   second_stat_type='Crit Damage', second_stat_min='19.2%', second_stat_max='88.2%',
+                                   passive_name='Gokadaiou Otogibanashi', passive_description=d.gokadaiou_otogibanashi,
+                                   in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                                   is_forgeable=False, is_standard=False)
 
 # 4 Star
 blackcliff_slasher = w.Claymore(name='Blackcliff Slasher', rarity='4 Star', base_atk_min=42, base_atk_max=510,
@@ -227,8 +253,25 @@ favonius_greatsword = w.Claymore(name='Favonius Greatsword', rarity='4 Star', ba
                                  second_stat_type='Energy Recharge', second_stat_min='13.3%', second_stat_max='61.3%',
                                  passive_name='Windfall', passive_description=d.windfall,
                                  in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
-                                 is_forgeable=False,
-                                 is_standard=True)
+                                 is_forgeable=False, is_standard=True)
+
+katsuragikiri_nagamasa = w.Claymore(name='Katsuragikiri Nagamasa', rarity='4 Star', base_atk_min=42, base_atk_max=510,
+                                    second_stat_type='Energy Recharge', second_stat_min='10%', second_stat_max='45.9%',
+                                    passive_name='Samurai Conduct', passive_description=d.samurai_conduct,
+                                    in_shop=False, in_gacha=False, in_battlepass=False, is_limited=False,
+                                    is_forgeable=True, is_standard=False)
+
+luxurious_sea_lord = w.Claymore(name='Luxurious Sea-Lord', rarity='4 Star', base_atk_min=41, base_atk_max=454,
+                                second_stat_type='ATK', second_stat_min='12%', second_stat_max='55.1%',
+                                passive_name='Oceanic Victory', passive_description=d.oceanic_victory,
+                                in_shop=False, in_gacha=False, in_battlepass=False, is_limited=True,
+                                is_forgeable=False, is_standard=False)
+
+akuoumaru = w.Claymore(name='Akuoumaru', rarity='4 Star', base_atk_min=42, base_atk_max=510,
+                       second_stat_type='ATK', second_stat_min='9%', second_stat_max='41.3%',
+                       passive_name='Watatsumi Wavewalker', passive_description=d.watatsumi_wavewalker,
+                       in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                       is_forgeable=False, is_standard=False)
 
 # 3 Star
 ferrous_shadow = w.Claymore(name='Ferrous Shadow', rarity='3 Star', base_atk_min=39, base_atk_max=401,
@@ -263,7 +306,7 @@ vortex_vanquisher = w.Polearm(name='Vortex Vanquisher', rarity='5 Star', base_at
                               second_stat_type='ATK', second_stat_min='%', second_stat_max='%',
                               passive_name='Golden Majesty', passive_description=d.golden_majesty,
                               in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
-                              is_standard=True)
+                              is_standard=False)
 
 skyward_spine = w.Polearm(name='Skyward Spine', rarity='5 Star', base_atk_min=48, base_atk_max=674,
                           second_stat_type='Energy Recharge', second_stat_min='8%', second_stat_max='36.8%',
@@ -279,12 +322,18 @@ primordial_jade_winged_spear = w.Polearm(name='Primordial Jade Winged-Spear', ra
                                          is_forgeable=False, is_standard=True)
 
 engulfing_lightning = w.Polearm(name='Engulfing Lightning', rarity='5 Star', base_atk_min=46,
-                                         base_atk_max=608, second_stat_type='Energy Recharge', second_stat_min='12%',
-                                         second_stat_max='55.1%', passive_name='Timeless Dream: Eternal Stove',
-                                         passive_description=d.timeless_dream,
-                                         in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
-                                         is_forgeable=False, is_standard=True)
+                                base_atk_max=608, second_stat_type='Energy Recharge', second_stat_min='12%',
+                                second_stat_max='55.1%', passive_name='Timeless Dream: Eternal Stove',
+                                passive_description=d.timeless_dream,
+                                in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                                is_forgeable=False, is_standard=False)
 
+calamity_queller = w.Polearm(name='Calamity Queller', rarity='5 Star', base_atk_min=49,
+                             base_atk_max=741, second_stat_type='ATK', second_stat_min='3.6%',
+                             second_stat_max='16.5%', passive_name='Extinguishing Precept',
+                             passive_description=d.extinguishing_precept,
+                             in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                             is_forgeable=False, is_standard=False)
 
 # 4 Star
 blackcliff_pole = w.Polearm(name='Blackcliff Pole', rarity='4 Star', base_atk_min=42, base_atk_max=510,
@@ -342,6 +391,23 @@ dragons_bane = w.Polearm(name='Dragon\'s Bane', rarity='4 Star', base_atk_min=41
                          in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
                          is_standard=True)
 
+kitain_cross_spear = w.Polearm(name='Kitain Cross Spear', rarity='4 Star', base_atk_min=44, base_atk_max=565,
+                               second_stat_type='Elemental Mastery', second_stat_min='24', second_stat_max='110',
+                               passive_name='Samurai Conduct', passive_description=d.samurai_conduct,
+                               in_shop=False, in_gacha=False, in_battlepass=False, is_limited=False, is_forgeable=True,
+                               is_standard=False)
+the_catch = w.Polearm(name='"The Catch"', rarity='4 Star', base_atk_min=42, base_atk_max=510,
+                      second_stat_type='Energy Recharge', second_stat_min='10%', second_stat_max='45.9%',
+                      passive_name='Shanty', passive_description=d.shanty,
+                      in_shop=False, in_gacha=False, in_battlepass=False, is_limited=True, is_forgeable=False,
+                      is_standard=False)
+
+wavebreakers_fin = w.Polearm(name='Wavebreaker\'s Fin', rarity='4 Star', base_atk_min=45, base_atk_max=620,
+                             second_stat_type='ATK', second_stat_min='3%', second_stat_max='13.8%',
+                             passive_name='Watatsumi Wavewalker', passive_description=d.watatsumi_wavewalker,
+                             in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                             is_standard=False)
+
 # 3 Star
 black_tassel = w.Polearm(name='Black Tassel', rarity='3 Star', base_atk_min=38, base_atk_max=354,
                          second_stat_type='HP', second_stat_min='10.2%', second_stat_max='46.9%',
@@ -373,10 +439,11 @@ skyward_atlas = w.Catalyst(name='Skyward Atlas', rarity='5 Star', base_atk_min=4
                            is_standard=True)
 
 everlasting_moonglow = w.Catalyst(name='Everlasting Moonglow', rarity='5 Star', base_atk_min=46, base_atk_max=608,
-                           second_stat_type='HP', second_stat_min='10.8%', second_stat_max='49.6%',
-                           passive_name='Byakuya Kougetsu', passive_description=d.byakuya_kougetsu,
-                           in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
-                           is_standard=False)
+                                  second_stat_type='HP', second_stat_min='10.8%', second_stat_max='49.6%',
+                                  passive_name='Byakuya Kougetsu', passive_description=d.byakuya_kougetsu,
+                                  in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False,
+                                  is_forgeable=False,
+                                  is_standard=False)
 
 # 4 Star
 blackcliff_agate = w.Catalyst(name='Blackcliff Agate', rarity='4 Star', base_atk_min=42, base_atk_max=510,
@@ -445,6 +512,18 @@ favonious_codex = w.Catalyst(name='Favonius Codex', rarity='4 Star', base_atk_mi
                              in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
                              is_standard=True)
 
+dodoco_tales = w.Catalyst(name='Dodoco Tales', rarity='4 Star', base_atk_min=41, base_atk_max=454,
+                          second_stat_type='ATK', second_stat_min='12%', second_stat_max='55.1%',
+                          passive_name='Dodoventure!', passive_description=d.dodoventure,
+                          in_shop=False, in_gacha=False, in_battlepass=False, is_limited=True, is_forgeable=False,
+                          is_standard=True)
+
+hakushin_ring = w.Catalyst(name='Hakushin Ring', rarity='4 Star', base_atk_min=44, base_atk_max=565,
+                           second_stat_type='Energy Recharge', second_stat_min='6.7%', second_stat_max='30.6%',
+                           passive_name='Sakura Saiguu', passive_description=d.sakura_saiguu,
+                           in_shop=False, in_gacha=False, in_battlepass=False, is_limited=False, is_forgeable=True,
+                           is_standard=True)
+
 # 3 Star
 thrilling_tales = w.Catalyst(name='Thrilling Tales of Dragon Slayers', rarity='3 Star', base_atk_min=39,
                              base_atk_max=401, second_stat_type='HP', second_stat_min='7.7%', second_stat_max='35.2%',
@@ -487,6 +566,12 @@ thundering_pulse = w.Bow(name='Thundering Pulse', rarity='5 Star', base_atk_min=
                          passive_name='Rule By Thunder', passive_description=d.rule_by_thunder,
                          in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
                          is_standard=False)
+
+polar_star = w.Bow(name='Polar Star', rarity='5 Star', base_atk_min=46, base_atk_max=608,
+                   second_stat_type='Crit Rate', second_stat_min='7.2%', second_stat_max='33.1%',
+                   passive_name='Daylight\'s Augury', passive_description=d.daylights_augury,
+                   in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                   is_standard=False)
 
 # 4 Star
 blackcliff_warbow = w.Bow(name='Blackcliff Warbow', rarity='4 Star', base_atk_min=44, base_atk_max=565,
@@ -554,6 +639,24 @@ windblume_ode = w.Bow(name='Windblume Ode', rarity='4 Star', base_atk_min=42, ba
                       passive_name='Windblume Wish', passive_description=d.windblume_wish,
                       in_shop=False, in_gacha=False, in_battlepass=False, is_limited=True, is_forgeable=False,
                       is_standard=False)
+
+mitternachts_waltz = w.Bow(name='Mitternachts Waltz', rarity='4 Star', base_atk_min=42, base_atk_max=510,
+                           second_stat_type='Physical DMG Bonus', second_stat_min='11.3%', second_stat_max='51.7%',
+                           passive_name='Evernight Duet', passive_description=d.windblume_wish,
+                           in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                           is_standard=False)
+
+hamayumi = w.Bow(name='Hamayumi', rarity='4 Star', base_atk_min=41, base_atk_max=454,
+                 second_stat_type='ATK', second_stat_min='12%', second_stat_max='55.1%',
+                 passive_name='Full Draw', passive_description=d.full_draw,
+                 in_shop=False, in_gacha=False, in_battlepass=False, is_limited=False, is_forgeable=True,
+                 is_standard=False)
+
+mouuns_moon = w.Bow(name='Mouun\'s Moon', rarity='4 Star', base_atk_min=44, base_atk_max=565,
+                    second_stat_type='ATK', second_stat_min='6%', second_stat_max='27.6%',
+                    passive_name='Watatsumi Wavewalker', passive_description=d.watatsumi_wavewalker,
+                    in_shop=False, in_gacha=True, in_battlepass=False, is_limited=False, is_forgeable=False,
+                    is_standard=False)
 
 # 3 Star
 slingshot = w.Bow(name='Slingshot', rarity='3 Star', base_atk_min=38, base_atk_max=354,

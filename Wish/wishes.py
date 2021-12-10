@@ -3,30 +3,39 @@ from sys import exit
 from Inventory import inventory as inv, list_com_banners as bn
 from Banners import promo_pity as pp
 from Banners import standard_banner, tartaglia_rerun_banner, everything_banner, zhongli_rerun_banner, eula_banner
-from Banners import klee_rerun_banner, kazuha_banner, ayaka_banner, yoimiya_banner, raiden_banner
+from Banners import klee_rerun_banner, kazuha_banner, ayaka_banner, yoimiya_banner, raiden_banner, kokomi_banner
+from Banners import tartaglia_rerun2_banner, hutao_rerun_banner, eula_rerun_banner, albedo_rerun_banner, itto_banner
 from Weapon_Banner import current_weapon_banner
 
 # Current Banner - Default
 banner_ = 'standard'
 banner_name = 'Standard'
+wish_animation = True
 
 
 def init():
     """
     Banners:
     Standard Banner = standard (By Default)
-    Childe Banner = childe
-    Zhongli Rerun Banner = zhongli
+    Childe Rerun Banner = childe_re
+    Zhongli Rerun Banner = zhongli_re
     Eula Banner = eula
-    Klee Rerun Banner = klee
+    Klee Rerun Banner = klee_re
     Kamisato Ayaka Banner = ayaka
     Yoimiya Banner = yoimiya
     Raiden Shogun Banner = raiden
+    Sangonomiya Kokomi Banner = kokomi
+    Childe Second Rerun Banner = childe_re2
+    Hu Tao Rerun Banner = hutao_re
+    Eula Rerun Banner = eula_re
+    Albedo Rerun Banner = albedo_re
+    Arataki 'Numero Uno' Itto Banner = itto
     Everything Banner = everything
-    weapon banner = weapon
+    Current Weapon Banner = weapon
     """
     global banner_
     global banner_name
+    global wish_animation
 
     while True:
         user_input = input('\n  > ')
@@ -99,6 +108,36 @@ def init():
                 print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
                 print('`~`' * 9, '\n')
                 continue
+            elif x == 'kokomi':
+                banner_name, banner_ = 'Sangonimiya Kokomi', 'kokomi'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'childe_re2':
+                banner_name, banner_ = 'Childe Rerun 2', 'childe_re2'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'hutao_re':
+                banner_name, banner_ = 'Hu Tao Rerun', 'hutao_re'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'eula_re':
+                banner_name, banner_ = 'Eula Rerun', 'eula_re'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'albedo_re':
+                banner_name, banner_ = 'Albedo Rerun', 'albedo_re'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
+            elif x == 'itto':
+                banner_name, banner_ = 'Arataki Itto', 'itto'
+                print(Color.RED + f'Changed to {banner_name} Banner' + Color.END)
+                print('`~`' * 9, '\n')
+                continue
             # Helps
             elif x == 'help':
                 help_me()
@@ -115,8 +154,17 @@ def init():
                 print('---')
                 print(f'Total pulls in {banner_name} Banner: {pp.get_pull_count(banner_)}')
                 print('`~`' * 13, '\n')
+            # Star Animation ON or OFF
+            elif x in ['on', 'animation on', 'animationon']:
+                wish_animation = True
+                print(Color.RED + 'Star Animation turned ON' + Color.END)
+                print('`~`' * 9, '\n')
+            elif x in ['off', 'animation off', 'animationoff']:
+                wish_animation = False
+                print(Color.RED + 'Star Animation turned OFF' + Color.END)
+                print('`~`' * 9, '\n')
             # Quit
-            elif x in ['q', 'quit', 'bye']:
+            elif x in ['q', 'quit', 'bye', 'exit']:
                 bye()
             else:
                 print('Type help for instructions or try again.')
@@ -146,6 +194,18 @@ def wish(banner, pull):
         yoimiya_banner.yoimiya_banner(pull)
     elif banner == 'raiden':
         raiden_banner.raiden_banner(pull)
+    elif banner == 'kokomi':
+        kokomi_banner.kokomi_banner(pull)
+    elif banner == 'childe_re2':
+        tartaglia_rerun2_banner.banner(pull)
+    elif banner == 'hutao_re':
+        hutao_rerun_banner.banner(pull)
+    elif banner == 'eula_re':
+        eula_rerun_banner.banner(pull)
+    elif banner == 'albedo_re':
+        albedo_rerun_banner.banner(pull)
+    elif banner == 'itto':
+        itto_banner.banner(pull)
     else:
         raise Exception('No specified banner or pull in wishes.init')
 
@@ -157,10 +217,11 @@ def get_pity_5(banner):
         return pp.five_star_weapon_pity
     elif banner == 'everything':
         return pp.five_star_pity_everything
-    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka', 'yoimiya', 'raiden']:
+    elif banner in ['childe_re','zhongli_re','eula','klee_re','kazuha','ayaka','yoimiya','raiden','kokomi','childe_re2',
+                    'hutao_re','eula_re','albedo_re','itto']:
         return pp.five_star_promo_pity
     else:
-        raise Exception('Not specified what banner is the pity')
+        raise Exception('Not specified what banner is the pity. Wishes/def_pity_5')
 
 
 def get_pity_4(banner):
@@ -170,10 +231,11 @@ def get_pity_4(banner):
         return pp.four_star_weapon_pity
     elif banner == 'everything':
         return pp.four_star_pity_everything
-    elif banner in ['childe_re', 'zhongli_re', 'eula', 'klee_re', 'kazuha', 'ayaka', 'yoimiya', 'raiden']:
+    elif banner in ['childe_re','zhongli_re','eula','klee_re','kazuha','ayaka','yoimiya','raiden','kokomi','childe_re2',
+                    'hutao_re','eula_re','albedo_re','itto']:
         return pp.four_star_promo_pity
     else:
-        raise Exception('Not specified what banner is the pity')
+        raise Exception('Not specified what banner is the pity. Wishes/def_pity_4')
 
 
 def help_me():
@@ -182,13 +244,15 @@ def help_me():
     n_10 = Color.DARKCYAN + '10' + Color.END
     n_inv = Color.DARKCYAN + 'inv' + Color.END
     n_pity = Color.DARKCYAN + 'pity' + Color.END
+    n_ON_OFF = Color.DARKCYAN + 'on' + Color.END + ' or ' + Color.DARKCYAN + 'off' + Color.END
     n_help = Color.DARKCYAN + 'help' + Color.END
     n_more = Color.GREEN + 'more' + Color.END
     n_q = Color.RED + 'q' + Color.END
     n_wn = Color.UNDERLINE + 'will not' + Color.END
     print('\n', '`~`' * 9, f'\nType {n_1} for a single pull. | Type {n_10} for a ten pull.\nType {n_inv} to see your '
                            f'inventory.\nType {n_pity} to see the current pity + total amount of'
-                           f' pulls made in your current banner.\nType {n_help} '
+                           f' pulls made in your current banner.\nType {n_ON_OFF} to turn On or Off the Star Animation.'
+                           f'\nType {n_help} '
                            f'to see this message again.\nType {n_more} to read banner instructions and more.'
                            f'\nType {n_q} to quit. Note: Your inventory {n_wn} be saved.\n', '`~`' * 17)
     init()
@@ -204,6 +268,12 @@ def more():
     ayaka_4 = ', '.join([str(elem) for elem in bn.ayaka_banner_4])
     yoimiya_4 = ', '.join([str(elem) for elem in bn.yoimiya_banner_4])
     raiden_4 = ', '.join([str(elem) for elem in bn.raiden_banner_4])
+    kokomi_4 = ', '.join([str(elem) for elem in bn.kokomi_banner_4])
+    childe_re2_4 = ', '.join([str(elem) for elem in bn.childe_re2_banner_4])
+    hutao_re_4 = ', '.join([str(elem) for elem in bn.hutao_rerun_banner_4])
+    eula_re_4 = ', '.join([str(elem) for elem in bn.eula_rerun_banner_4])
+    albedo_re_4 = ', '.join([str(elem) for elem in bn.albedo_rerun_banner_4])
+    itto_4 = ', '.join([str(elem) for elem in bn.itto_banner_4])
     # Weapons
     current_weapon_5 = ', '.join([str(elem) for elem in bn.current_weapon_banner_5])
     current_weapon_4 = ', '.join([str(elem) for elem in bn.current_weapon_banner_4])
@@ -213,7 +283,7 @@ def more():
 
     print('\n', '`~`' * 9)
     print('How to change banners:\nType the name of the banner you want to pull in. Banners available are:\n'
-          'Standard Banner' + Color.CYAN + ' = standard' + Color.END,
+          '(Default) Standard Banner' + Color.CYAN + ' = standard' + Color.END,
           '\nCurrent Weapon Banner ' + Color.YELLOW + f'({current_weapon_5})' + Color.PURPLE + f'({current_weapon_4})' + Color.CYAN + ' = weapon' + Color.END,
           '\nTartaglia Rerun Banner ' + Color.PURPLE + f'({childe_re_4})' + Color.CYAN + ' = childe_re' + Color.END,
           '\nZhongli Rerun Banner ' + Color.PURPLE + f'({zhongli_re_4})' + Color.CYAN + ' = zhongli_re' + Color.END,
@@ -223,6 +293,12 @@ def more():
           '\nAyaka Banner ' + Color.PURPLE + f'({ayaka_4})' + Color.CYAN + ' = ayaka' + Color.END,
           '\nYoimiya Banner ' + Color.PURPLE + f'({yoimiya_4})' + Color.CYAN + ' = yoimiya' + Color.END,
           '\nRaiden Shogun Banner ' + Color.PURPLE + f'({raiden_4})' + Color.CYAN + ' = raiden' + Color.END,
+          '\nSangonomiya Kokomi Banner ' + Color.PURPLE + f'({kokomi_4})' + Color.CYAN + ' = kokomi' + Color.END,
+          '\nTartaglia Rerun 2 Banner ' + Color.PURPLE + f'({childe_re2_4})' + Color.CYAN + ' = childe_re2' + Color.END,
+          '\nHu Tao Rerun Banner ' + Color.PURPLE + f'({hutao_re_4})' + Color.CYAN + ' = hutao_re' + Color.END,
+          '\nEula Rerun Banner ' + Color.PURPLE + f'({eula_re_4})' + Color.CYAN + ' = eula_re' + Color.END,
+          '\nAlbedo Rerun Banner ' + Color.PURPLE + f'({albedo_re_4})' + Color.CYAN + ' = albedo_re' + Color.END,
+          '\nArataki Itto Banner ' + Color.PURPLE + f'({itto_4})' + Color.CYAN + ' = itto' + Color.END,
           '\nEverything Banner (Contains every 5*,4* Character/Weapon in the game)' + Color.CYAN + ' = everything'
           + Color.END, '\n\nNotes:\n\t● Standard and Everything Banner have their own pity. Promotional Banners share '
                        'pity.\n\t● Standard Banner have the same functions '
@@ -239,7 +315,7 @@ def more():
                        '5 Star ~ 5.1% of getting a 4 Star, ~ 94.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts '
                        'after the 74th Pull. Hard Pity is in the 90th Pull.\n\t\t 4* is guaranteed in each 10 pull.'
                        '\n\t● Weapon Banner Probabilities: 0.7% of getting a 5 Star ~ 5.1% of getting a 4 Star, '
-                       '~ 93.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts after the 64th Pull. Hard Pity is'
+                       '~ 93.3% of getting a 3 Star.\n\t\t 5* Soft Pity starts after the 64th Pull. Hard Pity is '
                        'in the 80th pull. 4* is guaranteed in each 9 pull.')
     print('\n', '`~`' * 9)
     init()
@@ -252,88 +328,89 @@ def bye():
 
 # Animation changes for a 5,4 or 3 star.
 def animation(rarity, banner):
-    if rarity == 5:
-        print('~' * 26)
-        sleep(0.30)
-        print("`")
-        sleep(0.30)
-        print('  `')
-        sleep(0.30)
-        print('    `')
-        sleep(0.30)
-        print('      `')
-        sleep(0.20)
-        print(Color.YELLOW + '              `   *  ')
-        sleep(0.25)
-        print('           **  (  #  ) **       ')
-        sleep(0.25)
-        print('         *** (    #    ) ***      ')
-        sleep(0.25)
-        print('    ****  (      ###    )  ****     ')
-        sleep(0.25)
-        print('   *****(     🌠🌠🌠🌠🌠    )*****  ')
-        sleep(0.25)
-        print('    ****  (      ###    )  ****     ')
-        sleep(0.25)
-        print('         *** (    #    ) ***      ')
-        sleep(0.25)
-        print('           **  (  #  ) **       ')
-        sleep(0.25)
-        print('                  *           ' + Color.END)
-        sleep(0.4)
-        print('')
-    elif rarity == 4:
-        print('~' * 26)
-        sleep(0.30)
-        print("`")
-        sleep(0.30)
-        print('  `')
-        sleep(0.30)
-        print('    `')
-        sleep(0.30)
-        print('      `')
-        sleep(0.30)
-        print('         `')
-        sleep(0.20)
-        print(Color.PURPLE + '           `   *  ')
-        sleep(0.25)
-        print('         ** (  #  ) **       ')
-        sleep(0.25)
-        print('      *** (    #    ) ***      ')
-        sleep(0.25)
-        print('    ****(   🌠🌠🌠🌠   )****   ')
-        sleep(0.25)
-        print('      *** (    #    ) ***      ')
-        sleep(0.25)
-        print('         ** (  #  ) **       ')
-        sleep(0.25)
-        print('               *           ' + Color.END)
-        sleep(0.4)
-        print('')
-    else:
-        print('~' * 26)
-        sleep(0.30)
-        print("`")
-        sleep(0.30)
-        print('  `')
-        sleep(0.30)
-        print('    `')
-        sleep(0.30)
-        print('      `')
-        sleep(0.30)
-        print('         `')
-        sleep(0.20)
-        print(Color.CYAN + '           `   *  ')
-        sleep(0.25)
-        print('         ** (  #  ) **       ')
-        sleep(0.25)
-        print('      *** (    #    ) ***      ')
-        sleep(0.25)
-        print('         ** (  #  ) **       ')
-        sleep(0.25)
-        print('               *           ' + Color.END)
-        sleep(0.4)
-        print('')
+    if wish_animation:
+        if rarity == 5:
+            print('~' * 26)
+            sleep(0.30)
+            print("`")
+            sleep(0.30)
+            print('  `')
+            sleep(0.30)
+            print('    `')
+            sleep(0.30)
+            print('      `')
+            sleep(0.20)
+            print(Color.YELLOW + '              `   *  ')
+            sleep(0.25)
+            print('           **  (  #  ) **       ')
+            sleep(0.25)
+            print('         *** (    #    ) ***      ')
+            sleep(0.25)
+            print('    ****  (      ###    )  ****     ')
+            sleep(0.25)
+            print('   *****(     🌠🌠🌠🌠🌠    )*****  ')
+            sleep(0.25)
+            print('    ****  (      ###    )  ****     ')
+            sleep(0.25)
+            print('         *** (    #    ) ***      ')
+            sleep(0.25)
+            print('           **  (  #  ) **       ')
+            sleep(0.25)
+            print('                  *           ' + Color.END)
+            sleep(0.4)
+            print('')
+        elif rarity == 4:
+            print('~' * 26)
+            sleep(0.30)
+            print("`")
+            sleep(0.30)
+            print('  `')
+            sleep(0.30)
+            print('    `')
+            sleep(0.30)
+            print('      `')
+            sleep(0.30)
+            print('         `')
+            sleep(0.20)
+            print(Color.PURPLE + '           `   *  ')
+            sleep(0.25)
+            print('         ** (  #  ) **       ')
+            sleep(0.25)
+            print('      *** (    #    ) ***      ')
+            sleep(0.25)
+            print('    ****(   🌠🌠🌠🌠   )****   ')
+            sleep(0.25)
+            print('      *** (    #    ) ***      ')
+            sleep(0.25)
+            print('         ** (  #  ) **       ')
+            sleep(0.25)
+            print('               *           ' + Color.END)
+            sleep(0.4)
+            print('')
+        else:
+            print('~' * 26)
+            sleep(0.30)
+            print("`")
+            sleep(0.30)
+            print('  `')
+            sleep(0.30)
+            print('    `')
+            sleep(0.30)
+            print('      `')
+            sleep(0.30)
+            print('         `')
+            sleep(0.20)
+            print(Color.CYAN + '           `   *  ')
+            sleep(0.25)
+            print('         ** (  #  ) **       ')
+            sleep(0.25)
+            print('      *** (    #    ) ***      ')
+            sleep(0.25)
+            print('         ** (  #  ) **       ')
+            sleep(0.25)
+            print('               *           ' + Color.END)
+            sleep(0.4)
+            print('')
 
     if banner == 'standard':
         standard_banner.show_pulls()
@@ -357,6 +434,18 @@ def animation(rarity, banner):
         yoimiya_banner.show_pulls()
     elif banner == 'raiden':
         raiden_banner.show_pulls()
+    elif banner == 'kokomi':
+        kokomi_banner.show_pulls()
+    elif banner == 'childe_re2':
+        tartaglia_rerun2_banner.show_pulls()
+    elif banner == 'hutao_re':
+        hutao_rerun_banner.show_pulls()
+    elif banner == 'eula_re':
+        eula_rerun_banner.show_pulls()
+    elif banner == 'albedo_re':
+        albedo_rerun_banner.show_pulls()
+    elif banner == 'itto':
+        itto_banner.show_pulls()
     else:
         raise Exception('No banner.show_pulls specified')
 

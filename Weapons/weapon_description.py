@@ -38,6 +38,12 @@ composed = 'After dealing damage to an opponent with an Elemental Skill, the ski
 crush = 'On hit, Normal or Charged Attacks have a 50% chance to deal an additional 240~480% ATK DMG to ' \
         'opponents within a small AoE. Can only occur once every 15s.'
 
+daylights_augury = 'Elemental Skill and Elemental Burst DMG increased by 12~24%. After a Normal Attack, ' \
+                   'Charged Attack, Elemental Skill or Elemental Burst hits an opponent, 1 stack of Ashen Nightstar ' \
+                   'will be gained for 12s. When 1/2/3/4 stacks of Ashen Nightstar are present, ' \
+                   'ATK is increased by 10/20/30/48%. The stack of Ashen Nightstar created by the Normal Attack, ' \
+                   'Charged Attack, Elemental Skill or Elemental Burst will be counted independently of the others.'
+
 debut = 'When a character takes the field, they will gain a random theme song for 10s. ' \
         'This can only occur once every 30s. Recitative: ATK is increased by 60~120%. ' \
         'Aria: Increases all Elemental DMG by 48~96%. Interlude: Elemental Mastery is increased by 240~480.'
@@ -48,6 +54,9 @@ descension = 'Hitting enemies with Normal or Charged Attacks grants a 50% chance
              'the Sword of Descension, their ATK is increased by 66.'
 
 determination = 'Using an Elemental Burst grants a 12~24% increase in ATK and Movement SPD for 15s.'
+
+dodoventure = 'Normal Attack hits on opponents increase Charged Attack DMG by 16~32% for 6s. Charged Attack ' \
+              'hits on opponents increase ATK by 8~16% for 6s.'
 
 eagle_spear_of_justice = 'On hit, increases ATK by 3.2~6.0% for 6s. Max 7 stacks. This effect can only occur once ' \
                          'every 0.3s. While in possession of the maximum possible stacks, ' \
@@ -64,6 +73,14 @@ ever_changing = 'Hitting an opponent with a Normal Attack decreases the Stamina 
                 'Alternate sprint by 14~22% for 5s. Additionally, using a Sprint or Alternate Sprint ability ' \
                 'increases ATK by 20~40% for 5s.'
 
+evernight_duet = 'Normal Attack hits on opponents increase Elemental Skill DMG by 20~40% for 5s. Elemental Skill ' \
+                 'hits on opponents increase Normal Attack DMG by 20~40% for 5s.'
+
+extinguishing_precept = 'Gain 12~24% All Elemental DMG Bonus. Obtain Consummation for 20s after using an Elemental Skill, ' \
+                        'causing ATK to increase by 3.2~6.4% per second. This ATK increase has a maximum of 6 stacks. ' \
+                        'When the character equipped with this weapon is not on the field, Consummation\'s ' \
+                        'ATK increase is doubled.'
+
 falcons_defiance = 'ATK is increased by 20~40%. Triggers on taking DMG: the soul of the Falcon of the West awakens, ' \
                    'holding the banner of the resistance aloft, regenerating HP equal to 100~160% of ATK and dealing ' \
                    '200~320% of ATK as DMG to surrounding opponents. This effect can only occur once every 15s.'
@@ -76,11 +93,16 @@ frost_burial = 'Hitting an opponent with Normal and Charged Attacks has a 60~100
                'Everfrost Icicle above them, dealing 80~140% AoE ATK DMG. Opponents affected by Cryo are ' \
                'dealt 200~360% ATK DMG instead by the icicle. Can only occur once every 10s.'
 
+full_draw = 'Increases Normal Attack DMG by 16~32% and Charged Attack DMG by 12~24%. When the equipping ' \
+            'character\'s Energy reaches 100%, this effect is increased by 100%.'
+
 gilding = 'Using an Elemental Burst regenerates 4~6 Energy every 2s for 6s. ' \
           'All party members will regenerate 4~6% HP every 2s for this duration.'
 
 gladiator = 'If there are at least 2 opponents nearby, ATK is increased by 16~32% and DEF is increased by 16~32%. ' \
             'If there are less than 2 opponents nearby, ATK is increased by 24~48%.'
+
+gokadaiou_otogibanashi = 'DEF is increased by 28~56%. Normal and Charged Attack DMG is increased by 40~80% of DEF.'
 
 golden_majesty = 'Increases Shield Strength by 20~40%. Scoring hits on opponents increases ATK by 4~8% for 8s. ' \
                  'Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase ' \
@@ -103,6 +125,11 @@ infusion_stinger = 'Dealing Elemental DMG increases all DMG by 6~12% for 6s. ' \
 itinerant_hero = 'Increases DMG dealt by the character equipping this weapon by 12~24%. ' \
                  'Taking DMG disables this effect for 5s.'
 
+iwakura_succession = 'After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once ' \
+                     'every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist ' \
+                     'simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, ' \
+                     'the character regenerates 6 Energy for each seed consumed.'
+
 justice = 'Increases DMG dealt by Normal and Charged Attacks by 20~40%. Additionally, regenerates 60~100% of ' \
           'ATK as HP when Normal and Charged Attacks score a CRIT Hit.This effect can occur once every 5s.'
 
@@ -114,6 +141,17 @@ lithic_axiom_unity = 'For every character in the party who hails from Liyue, the
 
 magic_affinity = 'After using an Elemental Skill, increases ' \
                  'Normal and Charged Attack DMG by 8~16% for 12s. Max 2 stacks.'
+
+mistsplitters_edge = 'Gain a 12% Elemental DMG Bonus for all elements and receive the might of the Mistsplitter\'s ' \
+                     'Emblem. At stack levels 1/2/3, the Mistsplitter\'s Emblem provides a 8/16/28% Elemental DMG Bonus ' \
+                     'for the character\'s Elemental Type. The character will obtain 1 stack of Mistsplitter\'s Emblem ' \
+                     'in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting ' \
+                     'Elemental Burst (stack lasts 10s); Energy is less than 100% (stack disappears when Energy is ' \
+                     'full). Each stack\'s duration is calculated independently.'
+
+oceanic_victory = 'Increases Elemental Burst DMG by 12~24%. When Elemental Burst hits opponents, there is a 100% chance ' \
+                  'of summoning a huge onrush of tuna that deals 100~200% ATK as AoE DMG. ' \
+                  'This effect can occur once every 15s.'
 
 precise = 'Increases DMG against weak spots by 24~48%.'
 
@@ -161,6 +199,16 @@ rule_by_thunder = 'Increases ATK by 20% and grants the might of the Thunder Embl
                   'casting Elemental Skill (stack lasts 10s); Energy is less than 100% (stack disappears when Energy ' \
                   'is full). Each stack\'s duration is calculated independently.'
 
+sakura_saiguu = 'After the character equipped with this weapon triggers an Electro elemental reaction, ' \
+                'nearby party members of an Elemental Type involved in the elemental reaction receive a 10~20% ' \
+                'Elemental DMG Bonus for their element, lasting 6~12s. Elemental Bonuses gained in this way cannot be ' \
+                'stacked. '
+
+samurai_conduct = 'Increases Elemental Skill DMG by 6~12%. After Elemental Skill hits an opponent, the character ' \
+                  'loses 3 Energy but regenerates 3~5 Energy every 2s for the next 6s. This effect can occur once ' \
+                  'every 10s. Can be triggered even when the character is not on the field.'
+
+shanty = 'Increases Elemental Burst DMG by 16~32% and Elemental Burst CRIT Rate by 6~12%.'
 
 sky_piercing_fang = 'Increases Shield Strength by 20~40%. Scoring hits on opponents increases ATK by 4~8% for 8s. ' \
                     'Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase' \
@@ -177,6 +225,9 @@ slingshot = 'If a Normal or Charged Attack hits a target within 0.3s of being fi
 
 smashed_stone = 'On hit, Normal or Charged Attacks increase ATK and DEF by 4~8% for 6s. ' \
                 'Max 4 stacks. Can only occur once every 0.3s.'
+
+spotless_heart = 'Elemental Skill DMG is increased by 40~80% of DEF. The effect will be triggered no more than once ' \
+                 'every 1.5s and will be cleared 0.1s after the Elemental Skill deals DMG.'
 
 solar_shine = 'Normal Attack hits increase Elemental Skill and Elemental Burst DMG by 20~40% for 6s. ' \
               'Likewise, Elemental Skill or Elemental Burst hits increase Normal Attack DMG by 20~40% for 6s.'
@@ -218,6 +269,10 @@ vigorous = 'When HP is above 90%, increases CRIT Rate by 14~28%.'
 wandering_clouds = 'Increases Elemental DMG Bonus by 12~24%. Normal Attack hits have a 50% chance to earn ' \
                    'the favor of the clouds. which actively seek out nearby opponents to attack for 15s, ' \
                    'dealing 160~320% ATK DMG. Can only occur once every 30s.'
+
+watatsumi_wavewalker = 'For every point of the entire party\'s combined maximum Energy capacity, the Elemental ' \
+                       'Burst DMG of the character equipping this weapon is increased by 0.12~0.24%. A maximum ' \
+                       'of 40~80% increased Elemental Burst DMG can be achieved this way.'
 
 wavesplitter = 'Every 4s a character is on the field, they will deal 6~10% more DMG and take 3~2% more DMG. ' \
                'This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, ' \

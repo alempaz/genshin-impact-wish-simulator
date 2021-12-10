@@ -5,31 +5,36 @@ from Weapons import weapon_list as w
 char_list_obj = [c.diluc, c.jean, c.keqing, c.mona, c.qiqi, c.albedo, c.ganyu, c.hu_tao, c.klee, c.tartaglia, c.venti,
                  c.xiao, c.zhongli, c.ayaka, c.eula, c.amber, c.barbara, c.beidou, c.bennet, c.chongyun, c.diona,
                  c.fischl, c.kaeya, c.lisa, c.ningguang, c.noelle, c.razor, c.rosaria, c.sucrose, c.xianglin,
-                 c.xingqiu, c.xinyan, c.yanfei, c.kazuha, c.ayaka, c.yoimiya, c.sayu, c.sara, c.raiden]
+                 c.xingqiu, c.xinyan, c.yanfei, c.kazuha, c.ayaka, c.yoimiya, c.sayu, c.sara, c.raiden, c.kokomi,
+                 c.thoma, c.itto, c.gorou]
 
 # All Weapons in-game
 weapon_list_obj = [w.aquila_favonia,w.primordial_jade_cutter,w.summit_shaper,w.skyward_blade,w.blackcliff_longsword,
                    w.royal_longsword,w.the_black_sword,w.iron_sting,w.prototype_rancour,w.favonius_sword,
                    w.lions_roar,w.sacrificial_sword,w.the_flute,w.the_alley_flash,w.festering_desire,w.cool_steel,
-                   w.sword_of_descension,w.harbinger_of_dawn,w.skyrider_sword,w.freedom_sworn,
+                   w.sword_of_descension,w.harbinger_of_dawn,w.skyrider_sword,w.freedom_sworn,w.mistsplitter_reforged,
+                   w.amenoma_kageuchi, w.cinnabar_spindle,
 
                    w.song_of_broken_pines,w.skyward_pride,w.the_unforged,w.wolfs_gravestone,w.blackcliff_slasher,
                    w.royal_greatsword,w.serpent_spine,w.snow_tombed_starsilver,w.whiteblind,w.prototype_archaic,
                    w.sacrificial_greatsword,w.lithic_blade,w.the_bell,w.rainslasher,w.favonius_greatsword,w.debate_club,
-                   w.ferrous_shadow,w.bloodtainted_greatsword,
+                   w.ferrous_shadow,w.bloodtainted_greatsword,w.redhorn_stonethresher,w.katsuragikiri_nagamasa,
+                   w.luxurious_sea_lord,w.akuoumaru,
 
                    w.staff_of_homa,w.vortex_vanquisher,w.skyward_spine,w.primordial_jade_winged_spear,w.blackcliff_pole,
                    w.royal_spear,w.deathmatch,w.dragonspine_spear,w.prototype_starglitter,w.crescent_pike,w.lithic_spear,
-                   w.favonius_lance,w.dragons_bane,w.black_tassel,w.engulfing_lightning,
+                   w.favonius_lance,w.dragons_bane,w.black_tassel,w.engulfing_lightning,w.kitain_cross_spear,
+                   w.the_catch,w.wavebreakers_fin,
 
                    w.lost_prayer_to_the_sacred_winds,w.skyward_atlas,w.memory_of_dust,w.blackcliff_agate,w.royal_grimoire,
                    w.solar_pearl,w.mappa_mare,w.prototype_amber,w.frostbearer,w.eye_of_perception,w.the_widsith,
                    w.wine_and_song,w.favonious_codex,w.sacrificial_fragments,w.thrilling_tales,w.magic_guide,
-                   w.emerald_orb,w.everlasting_moonglow,
+                   w.emerald_orb,w.everlasting_moonglow,w.dodoco_tales,w.hakushin_ring,
 
                    w.amos_bow,w.elegy_of_the_end,w.skyward_harp,w.thundering_pulse,w.blackcliff_warbow,w.royal_bow,
                    w.the_viridescent_hunt, w.prototype_crescent,w.compound_bow,w.favonius_warbow,w.the_stringless,w.rust,
-                   w.sacrificial_bow, w.alley_hunter,w.windblume_ode,w.slingshot,w.sharpshooters_oath,w.raven_bow]
+                   w.sacrificial_bow, w.alley_hunter,w.windblume_ode,w.slingshot,w.sharpshooters_oath,w.raven_bow,
+                   w.polar_star,w.mitternachts_waltz,w.hamayumi,w.mouuns_moon]
 
 # Character List combinations
 star5_standard_characters = []
@@ -56,9 +61,6 @@ star3_weapons = []
 # ALL
 all_5star_weapons = []
 all_4star_weapons = []
-
-
-
 
 
 # Adding to lists - Char

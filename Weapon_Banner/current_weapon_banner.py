@@ -25,9 +25,9 @@ def weapon_banner(limit):
     """
     Banner contains all 5* standard weapons
     Banner contains all standard 4* characters and 4* weapons
-    Promotional 5* weapons with higher drop rate are 'Engulfing Lightning' and 'The Unforged'
-    Promotional 4* weapons are 'Favonius Lance, 'Sacrificial Bow', 'Lion's Roar', 'The Bell',
-    'The Widsith'
+    Promotional 5* weapons with higher drop rate are 'Redhorn Stonethresher' and 'Skyward Harp'
+    Promotional 4* weapons are 'Mitternachts Waltz, 'The Alley Flash, 'Sacrificial Fragments', 'The Bell',
+    'Favonius Lance'.
 
     5 Star Hard Pity is configured at 80, having higher probability of getting a 5 star after 64 (soft pity)
     4 Star Hard Pity is configured at 9

@@ -118,21 +118,33 @@ yoimiya = c.BowUser(name='Yoimiya', rarity='5 Star', element='Pyro', gender='Fem
                                               'hopes and dreams.', in_game=True, char_type='promo', )
 
 raiden = c.PolearmUser(name='Raiden Shogun', rarity='5 Star', element='Electro', gender='Female', nation='Inazuma',
-                   weapon='Polearm', description='Her Excellency, the Almighty Narukami Ogosho, who promised the '
-                                                 'people of Inazuma an unchanging Eternity.', in_game=True,
-                   char_type='promo', )
+                       weapon='Polearm', description='Her Excellency, the Almighty Narukami Ogosho, who promised the '
+                                                     'people of Inazuma an unchanging Eternity.', in_game=True,
+                       char_type='promo', )
 
-# Upcoming Characters
+itto = c.ClaymoreUser(name='Arataki Itto', rarity='5 Star', element='Geo', gender='Male', nation='Inazuma',
+                      weapon='Claymore',
+                      description='The first and greatest head of the Arataki Gang, famed throughout Inazuma City\'s '
+                                  'Hanamizaka... Wait, what? You\'ve never heard of them? Are you trying to be funny here?',
+                      in_game=True, char_type='promo')
 
 kokomi = c.CatalystUser(name='Sangonomiya Kokomi', rarity='5 Star', element='Hydro', gender='Female', nation='Inazuma',
-                   weapon='Catalyst', description='The Divine Priestess of Watatsumi Island. All of the island\'s '
-                                                  'affairs are at this young lady\'s fingertips.', in_game=False,
-                   char_type='promo', )
+                        weapon='Catalyst', description='The Divine Priestess of Watatsumi Island. All of the island\'s '
+                                                       'affairs are at this young lady\'s fingertips.', in_game=False,
+                        char_type='promo', )
 
 aloy = c.BowUser(name='Aloy', rarity='5 Star', element='Cryo', gender='Female', nation=None,
                  weapon='Bow', description='Formerly an outcast, now a hunter of unparalleled aptitude. '
                                            'Ready to do the right thing with her bow at any given time.', in_game=False,
                  char_type='promo', )
+
+# Upcoming Characters
+shenhe = c.PolearmUser(name='Shenhe', rarity='5 Star', element='Cryo', gender='Female', nation='Liyue',
+                       weapon='Polearm',
+                       description='An adepti disciple with a most unusual air about her. Having spent '
+                                   'much time cultivating in isolation in Liyue\'s mountains, she has become every bit '
+                                   'as cool and distant as the adepti themselves.', in_game=False,
+                       char_type='promo', )
 
 # 4 Star Characters -----------------------------------------------------
 amber = c.BowUser(name='Amber', rarity='4 Star', element='Pyro', gender='Female', nation='Mondstadt', weapon='Bow',
@@ -237,7 +249,7 @@ sucrose = c.CatalystUser(name='Sucrose', rarity='4 Star', element='Anemo', gende
                                      'sometimes prove to be more weird than wonderful — but on the whole, she has '
                                      'made monumental contributions to the field of bio-alchemy.')
 
-xianglin = c.PolearmUser(name='Xianglin', rarity='4 Star', element='Pyro', gender='Female', nation='Liyue',
+xianglin = c.PolearmUser(name='Xiangling', rarity='4 Star', element='Pyro', gender='Female', nation='Liyue',
                          weapon='Polearm', in_game=True, char_type='perma',
                          description='The Head Chef at the Wanmin Restaurant and also a waitress there, Xiangling is '
                                      'extremely passionate about cooking and excels at her signature hot and spicy '
@@ -269,7 +281,19 @@ sayu = c.ClaymoreUser(name='Sayu', rarity='4 Star', element='Anemo', gender='Fem
                                   'who always seems sleep-deprived.')
 
 sara = c.BowUser(name='Kujou Sara', rarity='4 Star', element='Electro', gender='Female', nation='Inazuma',
-                      weapon='Bow', in_game=True, char_type='perma',
-                      description='A general of the Tenryou Commission. Bold, decisive, and skilled in battle.')
-# Upcoming Characters
+                 weapon='Bow', in_game=True, char_type='perma',
+                 description='A general of the Tenryou Commission. Bold, decisive, and skilled in battle.')
 
+thoma = c.PolearmUser(name='Thoma', rarity='4 Star', element='Pyro', gender='Male', nation='Inazuma',
+                      weapon='Polearm', in_game=True, char_type='perma',
+                      description='The Kamisato Clan\'s housekeeper. A well-known "fixer" in Inazuma.')
+
+gorou = c.BowUser(name='Gorou', rarity='4 Star', element='Geo', gender='Male', nation='Inazuma',
+                  weapon='Bow', in_game=True, char_type='perma',
+                  description='The great general of Watatsumi Island\'s forces. He is deeply '
+                              'trusted by his subordinates.')
+yunjin = c.PolearmUser(name='Yun Jin', rarity='4 Star', element='Geo', gender='Female', nation='Liyue',
+                       weapon='Polearm', in_game=False, char_type='perma',
+                       description='A renowned Liyue opera singer who is skilled in both playwriting and singing. '
+                                   'Her style is one-of-a-kind, exquisite and delicate, much like the person herself.')
+# Upcoming Characters

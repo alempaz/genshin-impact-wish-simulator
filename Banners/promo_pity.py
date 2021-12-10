@@ -34,6 +34,12 @@ kazuha_pulls = 0
 ayaka_pulls = 0
 yoimiya_pulls = 0
 raiden_pulls = 0
+kokomi_pulls = 0
+childe_rerun2_pulls = 0
+hutao_rerun_pulls = 0
+eula_rerun_pulls = 0
+albedo_rerun_pulls = 0
+itto_pulls = 0
 
 
 def pull_count(banner):
@@ -48,6 +54,13 @@ def pull_count(banner):
     global ayaka_pulls
     global yoimiya_pulls
     global raiden_pulls
+    global kokomi_pulls
+    global childe_rerun2_pulls
+    global hutao_rerun_pulls
+    global eula_rerun_pulls
+    global albedo_rerun_pulls
+    global itto_pulls
+
 
     if banner == 'standard':
         standard_pulls += 1
@@ -55,7 +68,7 @@ def pull_count(banner):
         everything_pulls += 1
     elif banner == 'weapon':
         weapon_pulls += 1
-    elif banner == 'weapon':
+    elif banner == 'childe_re':
         childe_rerun_pulls += 1
     elif banner == 'zhongli_re':
         zhongli_rerun_pulls += 1
@@ -71,6 +84,18 @@ def pull_count(banner):
         yoimiya_pulls += 1
     elif banner == 'raiden':
         raiden_pulls += 1
+    elif banner == 'kokomi':
+        kokomi_pulls += 1
+    elif banner == 'childe_re2':
+        childe_rerun2_pulls += 1
+    elif banner == 'hutao_re':
+        hutao_rerun_pulls += 1
+    elif banner == 'eula_re':
+        eula_rerun_pulls += 1
+    elif banner == 'albedo_re':
+        albedo_rerun_pulls += 1
+    elif banner == 'itto':
+        itto_pulls += 1
     else:
         raise Exception('Could not add pull count. Banner not specified.')
 
@@ -98,5 +123,17 @@ def get_pull_count(banner):
         return yoimiya_pulls
     elif banner == 'raiden':
         return raiden_pulls
+    elif banner == 'kokomi':
+        return kokomi_pulls
+    elif banner == 'childe_re2':
+        return childe_rerun2_pulls
+    elif banner == 'hutao_re':
+        return hutao_rerun_pulls
+    elif banner == 'eula_re':
+        return eula_rerun_pulls
+    elif banner == 'albedo_re':
+        return albedo_rerun_pulls
+    elif banner == 'itto':
+        return itto_pulls
     else:
-        raise Exception('Could not return pull count. Banner not specified.')
+        raise Exception('Could not return pull count. Banner not specified./promo_pity(get_pull_count))')
