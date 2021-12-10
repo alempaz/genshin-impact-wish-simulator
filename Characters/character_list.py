@@ -1,7 +1,7 @@
 import characters as c
 
 # 5 Star Characters ------------------------------------------------------
-diluc = c.ClaymoreUser(name='Diluc', rarity='5 Star', element='Pyro', gender='Male', nation='Mondstadt', weapon='Sword',
+diluc = c.ClaymoreUser(name='Diluc', rarity='5 Star', element='Pyro', gender='Male', nation='Mondstadt', weapon='Claymore',
                        description='As the wealthiest gentleman in Mondstadt, the ever-dapper Diluc always presents '
                                    'himself as the epitome of perfection. But behind the courteous visage burns '
                                    'a zealous soul that has sworn to protect Mondstadt at all costs, allowing him '
@@ -14,7 +14,7 @@ jean = c.SwordUser(name='Jean', rarity='5 Star', element='Anemo', gender='Female
                                'Stormterror\'s assault, and she will guard Mondstadt with her life as always.',
                    in_game=True, char_type='perma')
 
-keqing = c.SwordUser(name='Keqing', rarity='5 Star', element='Electro', gender='Female', nation='Mondstadt',
+keqing = c.SwordUser(name='Keqing', rarity='5 Star', element='Electro', gender='Female', nation='Liyue',
                      weapon='Sword', in_game=True, char_type='perma',
                      description='The Yuheng of the Liyue Qixing. Keqing has much to say about Rex Lapis\' unilateral '
                                  'approach to policymaking in Liyue — but in truth, gods admire skeptics such as her '
@@ -30,7 +30,7 @@ mona = c.CatalystUser(name='Mona', rarity='5 Star', element='Hydro', gender='Fem
                                   'use astrology for profit... It is this very resolution that has caused '
                                   'her to constantly fret about money.')
 
-qiqi = c.SwordUser(name='Qiqi', rarity='5 Star', element='Cryo', gender='Female', nation='Mondstadt', weapon='Sword',
+qiqi = c.SwordUser(name='Qiqi', rarity='5 Star', element='Cryo', gender='Female', nation='Liyue', weapon='Sword',
                    description='An apprentice and herb gatherer at Bubu Pharmacy. "Blessed" by the adepti with a body '
                                'that cannot die, this petite zombie cannot do anything without first giving herself '
                                'orders to do it. Qiqi\'s memory is like a sieve. Out of necessity, she always carries '
@@ -39,7 +39,7 @@ qiqi = c.SwordUser(name='Qiqi', rarity='5 Star', element='Cryo', gender='Female'
                    in_game=True, char_type='perma')
 
 # 5 Star Promotional Characters ------------------------------------------
-albedo = c.SwordUser(name='Albedo', rarity='5 Star', element='Geo', gender='Male', nation='Liyue', weapon='Sword',
+albedo = c.SwordUser(name='Albedo', rarity='5 Star', element='Geo', gender='Male', nation='Mondstadt', weapon='Sword',
                      description='An alchemist based in Mondstadt, in the service of the Knights of Favonius.'
                                  '"Genius," "Kreideprinz," or "Captain of the Investigation Team"... Such titles and '
                                  'honors are of no consequence to him when there is so much more research to conduct.',
@@ -66,7 +66,7 @@ klee = c.CatalystUser(name='Klee', rarity='5 Star', element='Pyro', gender='Fema
                                   'solitary confinement gives lots of time to think about new gunpowder formulas...'
                                   'But it\'d still be better to not be in solitary in the first place.')
 
-tartaglia = c.BowUser(name='Tartaglia', rarity='5 Star', element='Hydro', gender='Male', nation='Snezhnaya', weapon='',
+tartaglia = c.BowUser(name='Tartaglia', rarity='5 Star', element='Hydro', gender='Male', nation='Snezhnaya', weapon='Bow',
                       description='Meet Tartaglia — the cunning Snezhnayan whose unpredictable personality keeps '
                                   'people guessing his every move. Don\'t be under any illusion as to what he might be '
                                   'thinking or what his intentions are. Just remember this: Behind that innocent, '
@@ -125,17 +125,18 @@ raiden = c.PolearmUser(name='Raiden Shogun', rarity='5 Star', element='Electro',
 itto = c.ClaymoreUser(name='Arataki Itto', rarity='5 Star', element='Geo', gender='Male', nation='Inazuma',
                       weapon='Claymore',
                       description='The first and greatest head of the Arataki Gang, famed throughout Inazuma City\'s '
-                                  'Hanamizaka... Wait, what? You\'ve never heard of them? Are you trying to be funny here?',
+                                  'Hanamizaka... Wait, what? You\'ve never heard of them? Are you trying to be funny '
+                                  'here?',
                       in_game=True, char_type='promo')
 
 kokomi = c.CatalystUser(name='Sangonomiya Kokomi', rarity='5 Star', element='Hydro', gender='Female', nation='Inazuma',
                         weapon='Catalyst', description='The Divine Priestess of Watatsumi Island. All of the island\'s '
-                                                       'affairs are at this young lady\'s fingertips.', in_game=False,
+                                                       'affairs are at this young lady\'s fingertips.', in_game=True,
                         char_type='promo', )
 
 aloy = c.BowUser(name='Aloy', rarity='5 Star', element='Cryo', gender='Female', nation=None,
                  weapon='Bow', description='Formerly an outcast, now a hunter of unparalleled aptitude. '
-                                           'Ready to do the right thing with her bow at any given time.', in_game=False,
+                                           'Ready to do the right thing with her bow at any given time.', in_game=True,
                  char_type='promo', )
 
 # Upcoming Characters
@@ -160,7 +161,7 @@ barbara = c.CatalystUser(name='Barbara', rarity='4 Star', element='Hydro', gende
                                      'the city\'s spirit of freedom" — Barbara, regarding her popularity.',
                          weapon='Catalyst', in_game=True, char_type='perma')
 
-beidou = c.ClaymoreUser(name='Beidou', rarity='4 Star', element='Hydro', gender='Female', nation='Liyue',
+beidou = c.ClaymoreUser(name='Beidou', rarity='4 Star', element='Electro', gender='Female', nation='Liyue',
                         weapon='Claymore', in_game=True, char_type='perma',
                         description='Captain of the Crux, with quite the reputation in Liyue. There are those who say '
                                     'she can split mountains and part the sea. Others say she draws lightning through '
@@ -292,8 +293,9 @@ gorou = c.BowUser(name='Gorou', rarity='4 Star', element='Geo', gender='Male', n
                   weapon='Bow', in_game=True, char_type='perma',
                   description='The great general of Watatsumi Island\'s forces. He is deeply '
                               'trusted by his subordinates.')
+
+# Upcoming Characters
 yunjin = c.PolearmUser(name='Yun Jin', rarity='4 Star', element='Geo', gender='Female', nation='Liyue',
                        weapon='Polearm', in_game=False, char_type='perma',
                        description='A renowned Liyue opera singer who is skilled in both playwriting and singing. '
                                    'Her style is one-of-a-kind, exquisite and delicate, much like the person herself.')
-# Upcoming Characters
